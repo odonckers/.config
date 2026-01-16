@@ -14,9 +14,8 @@ export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 export PATH="$PATH:$HOME/.opencode/bin"
 export PATH="$PATH:$HOME/.dotnet/tools"
 
-export CHEZMOI_SOURCE_DIR="$HOME/.local/share/chezmoi"
-export NVM_DIR="$HOME/.config/nvm"
 export DOTNET_ROOT="/opt/homebrew/opt/dotnet@6/libexec"
 
-[[ -f $HOME/.zshenv.local ]] && source $HOME/.zshenv.local
 . "$HOME/.cargo/env"
+
+[[ -f $HOME/.zshenv.local ]] && source $HOME/.zshenv.local

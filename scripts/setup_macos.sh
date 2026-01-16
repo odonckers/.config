@@ -117,29 +117,14 @@ else
   echo -e "${GREEN}✓ UV installed${NC}"
 fi
 
-# ---- Node --------------------------
-
-# Not working
-#if command -v nvm &>/dev/null; then
-#    echo "🟩 NVM is already installed"
-#else
-#    echo "🟩 Installing NVM..."
-#
-#    # Install Node Version Manager (https://github.com/nvm-sh/nvm)
-#    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-#
-#    # Install node
-#    nvm install node
-#fi
-
 # ---- Tools ---------------------
 
 if command -v brew &>/dev/null; then
   if ask_confirmation "🍺 Install neccesary development tools via Homebrew?"; then
     echo "🍺 Installing tools..."
 
-    # Install tools
-    brew install wget ripgrep bat eza zoxide fzf delta gh nvim lazygit
+    # Install tools that can not be installed by mise
+    brew install mise php watchman wget xcodegen
 
     echo -e "${GREEN}✓ Tools installed${NC}"
   else

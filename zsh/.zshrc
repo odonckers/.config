@@ -17,6 +17,11 @@ else
   compinit -C
 fi
 
+if (( $+commands[mise] )); then
+  eval "$(mise activate zsh)"
+  alias mx="mise exec --"
+fi
+
 (( $+commands[nvim] )) && alias vim=nvim
 (( $+commands[eza] )) && alias ls=eza
 (( $+commands[lazygit] )) && alias lg=lazygit
