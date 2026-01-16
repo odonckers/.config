@@ -139,7 +139,7 @@ if command -v brew &>/dev/null; then
     echo "🍺 Installing tools..."
 
     # Install tools
-    brew install wget ripgrep bat eza zoxide fzf delta gh chezmoi starship nvim lazygit
+    brew install wget ripgrep bat eza zoxide fzf delta gh nvim lazygit
 
     echo -e "${GREEN}✓ Tools installed${NC}"
   else
@@ -168,16 +168,20 @@ fi
 
 # ---- Dotfiles ------------------
 
-if command -v chezmoi &>/dev/null && command -v gh &>/dev/null; then
+if command -v gh &>/dev/null; then
   if gh auth status &>/dev/null; then
     GITHUB_USERNAME=$(gh api user -q .login)
 
     if [ -n "$GITHUB_USERNAME" ]; then
-      if ask_confirmation "☁️ Apply dotfiles from chezmoi (github.com/${GITHUB_USERNAME}/chezmoi)?"; then
+      if ask_confirmation "☁️ Apply dotfiles from GitHub repo (github.com/${GITHUB_USERNAME}/.config)?"; then
         echo "☁️ Applying dotfiles..."
 
-        # Apply chezmoi backup
-        chezmoi init "github.com/${GITHUB_USERNAME}/chezmoi" --apply
+        # Clone .config repo
+        gh repo clone $GITHUB_USERNAME/.config $HOME/.config
+
+        # Symlink zsh (the rest can be symlinked by hand)
+        ln -s $HOME/.config/zsh/.zshrc $HOME/.zshrc
+        ln -s $HOME/.config/zsh/.zshenv $HOME/.zshenv
 
         echo -e "${GREEN}✓ Dotfiles applied${NC}"
       else
@@ -190,10 +194,5 @@ if command -v chezmoi &>/dev/null && command -v gh &>/dev/null; then
     echo -e "${YELLOW}⚠️ GitHub CLI not authenticated, skipping dotfiles${NC}"
   fi
 else
-  if ! command -v chezmoi &>/dev/null; then
-    echo -e "${YELLOW}⚠️ Chezmoi not available, skipping dotfiles${NC}"
-  fi
-  if ! command -v gh &>/dev/null; then
-    echo -e "${YELLOW}⚠️ GitHub CLI not available, skipping dotfiles${NC}"
-  fi
+  echo -e "${YELLOW}⚠️ GitHub CLI not available, skipping dotfiles${NC}"
 fi
