@@ -4,9 +4,10 @@ return {
     priority = 1000,
     enabled = true,
     opts = {
-        transparent = true,
         style = {
             strings = 'none',
+            keyword_return = 'bold',
+            keywords_exception = 'bold',
         },
     },
     config = function(_, opts)
