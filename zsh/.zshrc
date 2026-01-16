@@ -22,20 +22,12 @@ if (( $+commands[mise] )); then
   alias mx="mise exec --"
 fi
 
-(( $+commands[nvim] )) && alias vim=nvim
+(( $+commands[assume] )) && alias assume=". assume"
 (( $+commands[eza] )) && alias ls=eza
 (( $+commands[lazygit] )) && alias lg=lazygit
-(( $+commands[assume] )) && alias assume=". assume"
+(( $+commands[ng] )) && source <(ng completion script)
+(( $+commands[nvim] )) && alias vim=nvim
 (( $+commands[zoxide] )) && eval "$(zoxide init zsh)"
-
-if (( $+commands[ng] )); then
-  alias ng-clean="ng generate @angular/core:cleanup-unused-imports"
-  source <(ng completion script)
-fi
-
-[[ -s $NVM_DIR/nvm.sh ]] && . $NVM_DIR/nvm.sh
-[[ -s $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
-[[ -s $HOME/.cargo/env ]] && . $HOME/.cargo/env
 
 alias l="ls -l --git"
 alias ll="l -ah"
