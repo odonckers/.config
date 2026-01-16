@@ -14,6 +14,7 @@
 !/git
 !/lazygit
 !/nvim
+!/zsh
 
 # But ignore this file without the allowed path
 /nvim/lazy-lock.json
