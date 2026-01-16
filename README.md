@@ -8,9 +8,9 @@ Feel free to browse around, take inspiration, or use anything you find helpful.
 This repository contains my carefully curated setup for a productive and pleasant development environment.
 At its heart, you'll find:
 
-- **Zsh** - My shell of choice
-- **Neovim** - My primary text editor
-- **Ghostty** - A fast, modern terminal emulator
+- **zsh** - My shell of choice
+- **neovim** - My primary text editor
+- **Ghostty** - A fast, modern terminal emulator (although I do like **kitty** too...)
 - **And more** - Additional tools and configurations that make my workflow, well, my workflow
 
 ## Getting Started
