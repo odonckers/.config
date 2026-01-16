@@ -1,0 +1,15 @@
+gui:
+  skipRewordInEditorWarning: true
+  nerdFontsVersion: "3"
+  border: 'single'
+os:
+  editPreset: 'nvim' # see 'Configuring File Editing' section
+git:
+  pagers:
+    - # delta
+      colorArg: always
+      pager: delta --dark --paging=never
+      # ydiff
+      # colorArg: never
+      # pager: ydiff -p cat -s --wrap --width={{columnWidth}}
+  overrideGpg: true

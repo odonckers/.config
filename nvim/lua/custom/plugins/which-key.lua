@@ -1,0 +1,14 @@
+return {
+    'folke/which-key.nvim',
+    lazy = false,
+    opts = {
+        preset = 'helix',
+        spec = {
+            { '<leader>a', group = 'AI', mode = { 'n', 't', 'i', 'x' } },
+            { '<leader>d', group = 'Diagnostics' },
+            { '<leader>n', group = 'Notes' },
+            { '<leader>t', group = 'Toggle' },
+        },
+    },
+    config = function(_, opts) require('which-key').setup(opts) end,
+}

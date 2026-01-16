@@ -1,0 +1,18 @@
+# ---- IMPORTANT ----------------------------------------------
+# This is an inverse gitignore. Rather than adding all files
+# and ignoring specific files, it instead selectively adds
+# folders and files defined bellow.
+# -------------------------------------------------------------
+
+# Ignore all files
+/*
+
+# Except these files
+!.gitignore
+!/ghostty
+!/git
+!/lazygit
+!/nvim
+
+# But ignore this file without the allowed path
+/nvim/lazy-lock.json
