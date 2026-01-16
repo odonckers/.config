@@ -1,62 +1,37 @@
 -- Toggle auto formatting
 vim.api.nvim_create_user_command('ToggleAutoFormatting', function()
-    vim.b.autofmt = (vim.b.autofmt or false) == false
-    if vim.b.autofmt then
-        vim.notify('Toggled auto format on for this buffer')
-    else
-        vim.notify('Toggled auto format off for this buffer')
-    end
+    vim.b.autofmt = not vim.b.autofmt
+    vim.notify('Toggled auto format ' .. (vim.b.autofmt and 'on' or 'off') .. ' for this buffer')
 end, {})
 
 -- Toggle relative line numbers
 vim.api.nvim_create_user_command('ToggleRelativeLineNumbers', function()
-    vim.g.relativenumber = (vim.g.relativenumber or vim.opt.relativenumber:get()) == false
+    vim.g.relativenumber = not (vim.g.relativenumber or vim.opt.relativenumber:get())
     vim.opt.relativenumber = vim.g.relativenumber
-    if vim.g.relativenumber then
-        vim.notify('Toggled relative line numbers on')
-    else
-        vim.notify('Toggled relative line numbers off')
-    end
+    vim.notify('Toggled relative line numbers ' .. (vim.g.relativenumber and 'on' or 'off'))
 end, {})
 
 -- Toggle spell check
 vim.api.nvim_create_user_command('ToggleSpellCheck', function()
-    ---@diagnostic disable-next-line: undefined-field
-    vim.opt_local.spell = (vim.opt_local.spell:get() or false) == false
-    if vim.opt_local.spell then
-        vim.notify('Toggled spell check on for this buffer')
-    else
-        vim.notify('Toggled spell check off for this buffer')
-    end
+    vim.opt_local.spell = not vim.opt_local.spell
+    vim.notify('Toggled spell check ' .. (vim.opt_local.spell and 'on' or 'off') .. ' for this buffer')
 end, {})
 
 -- Toggle word wrap
 vim.api.nvim_create_user_command('ToggleWordWrap', function()
-    ---@diagnostic disable-next-line: undefined-field
-    vim.opt_local.wrap = (vim.opt_local.wrap:get() or false) == false
-    if vim.opt_local.wrap then
-        vim.notify('Toggled word wrap on for this buffer')
-    else
-        vim.notify('Toggled word wrap off for this buffer')
-    end
+    vim.opt_local.wrap = not vim.opt_local.wrap
+    vim.notify('Toggled word wrap ' .. (vim.opt_local.wrap and 'on' or 'off') .. ' for this buffer')
 end, {})
 
 -- Toggle LSP virtual lines
 vim.api.nvim_create_user_command('ToggleLspVirtualLines', function()
-    local virtuallines = (vim.g.virtual_lines or true) == false
-    vim.g.virtual_lines = virtuallines
-
-    local opts = {}
-    if virtuallines then
-        opts.virtual_lines = { current_line = true }
-        opts.virtual_text = false
-        vim.notify('Toggled virtual lines on')
-    else
-        opts.virtual_lines = false
-        opts.virtual_text = { current_line = true }
-        vim.notify('Toggled virtual lines off')
-    end
-    vim.diagnostic.config(opts)
+    local current = vim.diagnostic.config() or {}
+    local enabled = current.virtual_lines ~= false and current.virtual_lines ~= nil
+    vim.diagnostic.config({
+        virtual_lines = not enabled and { current_line = true } or false,
+        virtual_text = enabled and { current_line = true } or false,
+    })
+    vim.notify('Toggled LSP virtual lines ' .. (not enabled and 'on' or 'off'))
 end, {})
 
 -- Toggle LSP inlay hints

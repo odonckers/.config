@@ -41,3 +41,31 @@ vim.api.nvim_create_autocmd('FileType', {
         vim.opt_local.conceallevel = 2
     end,
 })
+
+-- Add leading lines for indentation
+local function update_leadmultispace(is_local)
+    local opt = is_local and vim.opt_local or vim.opt
+    ---@diagnostic disable-next-line: undefined-field
+    local shiftwidth = opt.shiftwidth:get()
+    if shiftwidth == 0 then
+        ---@diagnostic disable-next-line: undefined-field
+        shiftwidth = opt.tabstop:get()
+    end
+    local listchars = opt.listchars:get()
+    local pattern = vim.g.indentline_char .. string.rep(vim.g.lead_char, shiftwidth - 1)
+    listchars.leadmultispace = pattern
+    opt.listchars = listchars
+end
+
+vim.api.nvim_create_autocmd('OptionSet', {
+    pattern = 'shiftwidth',
+    callback = function() update_leadmultispace(vim.v.option_type == 'local') end,
+    desc = 'Update leadmultispace when shiftwidth changes',
+})
+vim.api.nvim_create_autocmd({ 'BufEnter', 'FileType' }, {
+    callback = function()
+        -- Delay slightly to ensure filetype settings have been applied
+        vim.schedule(update_leadmultispace)
+    end,
+    desc = 'Update leadmultispace on buffer enter',
+})

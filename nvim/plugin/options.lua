@@ -1,6 +1,11 @@
+-- Custom settings
+vim.g.indentline_char = '│'
+vim.g.lead_char = '·'
+vim.g.relativenumber = false
+
 -- Basic settings
 vim.opt.number = true -- Line numbers
-vim.opt.relativenumber = false -- Relative line numbers
+vim.opt.relativenumber = vim.g.relativenumber -- Relative line numbers
 vim.opt.cursorline = true -- Highlight current line
 vim.opt.wrap = false -- Don't wrap lines
 vim.opt.scrolloff = 10 -- Keep 10 lines above/below cursor
@@ -38,7 +43,12 @@ vim.opt.concealcursor = '' -- Don't hide cursor line markup
 vim.opt.lazyredraw = false -- Don't redraw during macros
 vim.opt.synmaxcol = 300 -- Syntax highlighting limit
 vim.opt.list = true -- Display whitespace characters
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' } -- Whitespace characters definitions
+vim.opt.listchars = { -- Whitespace characters definitions
+    tab = '» ',
+    trail = '·',
+    nbsp = '␣',
+    lead = vim.g.lead_char,
+}
 vim.opt.fillchars = { eob = ' ' } -- Fill characters
 vim.opt.breakindent = true -- Wrapped lines will indent visually
 vim.opt.linebreak = true -- Wrapped lines will soft break on whitespace
@@ -62,7 +72,6 @@ local undodir = vim.fn.expand('~/.vim/undodir')
 if vim.fn.isdirectory(undodir) == 0 then vim.fn.mkdir(undodir, 'p') end
 
 -- LSP and diagnostic visuals
--- vim.lsp.inlay_hint.enable()
 vim.diagnostic.config({
     float = {
         border = 'rounded',
