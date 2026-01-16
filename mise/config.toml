@@ -22,6 +22,7 @@ node = "24"
 "npm:@angular/cli" = "latest"
 "npm:@github/copilot" = ["prerelease", "latest"]
 "npm:typescript" = "latest"
+opencode = "latest"
 ripgrep = "latest"
 vault = "latest"
 zoxide = "latest"
