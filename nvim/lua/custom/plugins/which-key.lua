@@ -6,6 +6,7 @@ return {
         spec = {
             { '<leader>a', group = 'AI', mode = { 'n', 't', 'i', 'x' } },
             { '<leader>d', group = 'Diagnostics' },
+            { '<leader>g', group = 'Git' },
             { '<leader>n', group = 'Notes' },
             { '<leader>t', group = 'Toggle' },
         },
