@@ -8,9 +8,9 @@ Feel free to browse around, take inspiration, or use anything you find helpful.
 This repository contains my carefully curated setup for a productive and pleasant development environment.
 At its heart, you'll find:
 
+- **Zsh** - My shell of choice
 - **Neovim** - My primary text editor
 - **Ghostty** - A fast, modern terminal emulator
-- **Zsh** - My shell of choice
 - **And more** - Additional tools and configurations that make my workflow, well, my workflow
 
 ## Getting Started
@@ -37,7 +37,7 @@ While this is a personal configuration repository, I'm always open to suggestion
 If you spot a bug, have an optimization idea, or want to share a cool trick,
 feel free to open an issue or submit a pull request.
 
-## 📝 License
+## License
 
 These configurations are shared freely. Use them however you'd like!
 
