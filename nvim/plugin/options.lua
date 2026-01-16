@@ -32,6 +32,7 @@ vim.opt.showmode = false -- Don't show mode in command line
 vim.opt.pumheight = 10 -- Popup menu height
 vim.opt.pumblend = 0 -- Popup menu transparency
 vim.opt.winblend = 0 -- Floating window transparency
+vim.o.winborder = 'rounded' -- Floating window border
 vim.opt.conceallevel = 0 -- Don't hide markup
 vim.opt.concealcursor = '' -- Don't hide cursor line markup
 vim.opt.lazyredraw = false -- Don't redraw during macros
@@ -113,9 +114,6 @@ vim.opt.fixendofline = false -- Fix end of line
 vim.opt.history = 100 -- Remember N lines in history
 vim.cmd('syntax sync minlines=256') -- Limit syntax parsing to N amount of lines
 vim.opt.spell = false -- Set spell check globally for all file types
-
--- Appearance settings
-vim.o.winborder = 'rounded'
 
 -- Folding settings
 vim.opt.foldmethod = 'expr' -- Use expression for folding
