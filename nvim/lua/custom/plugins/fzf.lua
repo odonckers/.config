@@ -57,6 +57,14 @@ return {
         { '<leader>dw', '<cmd>FzfLua diagnostics_workspace<cr>', desc = 'Search in workspace', silent = true },
 
         { '<leader><leader>', '<cmd>FzfLua files<cr>', desc = 'Files FZF', silent = true },
+        {
+            '<leader>b',
+            -- height = 4 (decorations) + 1 (separator) + 40 (buffers)
+            -- width = 4 (decorations) + 100
+            '<cmd>FzfLua buffers winopts={height=45,width=104,preview={hidden=true}}<cr>',
+            desc = 'Search open buffers',
+            silent = true,
+        },
         { '<leader>e', '<cmd>FzfLua oldfiles<cr>', desc = 'Search old files', silent = true },
         { '<leader>j', '<cmd>FzfLua jumps<cr>', desc = 'Search jumplist', silent = true },
         { '<leader>r', '<cmd>FzfLua resume<cr>', desc = 'Resume last open FZF', silent = true },
