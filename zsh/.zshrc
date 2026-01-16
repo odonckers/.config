@@ -23,12 +23,6 @@ fi
 (( $+commands[assume] )) && alias assume=". assume"
 (( $+commands[zoxide] )) && eval "$(zoxide init zsh)"
 
-if (( $+commands[chezmoi] )); then
-  alias ch=chezmoi
-  alias chlg="lazygit --path $CHEZMOI_SOURCE_DIR"
-  eval "$(chezmoi completion zsh)"
-fi
-
 if (( $+commands[ng] )); then
   alias ng-clean="ng generate @angular/core:cleanup-unused-imports"
   source <(ng completion script)
