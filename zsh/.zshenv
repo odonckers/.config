@@ -16,6 +16,4 @@ export PATH="$PATH:$HOME/.dotnet/tools"
 
 export DOTNET_ROOT="/opt/homebrew/opt/dotnet@6/libexec"
 
-. "$HOME/.cargo/env"
-
 [[ -f $HOME/.zshenv.local ]] && source $HOME/.zshenv.local
