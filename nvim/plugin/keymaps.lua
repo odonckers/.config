@@ -40,6 +40,19 @@ vim.keymap.set('n', '<C-S-up>', '<C-w>K', { desc = 'Swap top', silent = true })
 vim.keymap.set('n', '<leader>x', '<cmd>edit ~/.config/nvim/init.lua<cr>', { desc = 'Edit config', silent = true })
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Open lazy', silent = true })
 
+-- Quickfix list
+vim.keymap.set('n', '<leader>co', '<cmd>copen<cr>', { desc = 'Open', silent = true })
+vim.keymap.set('n', '<leader>cc', '<cmd>cclose<cr>', { desc = 'Close', silent = true })
+vim.keymap.set('n', '<leader>cn', '<cmd>cnext<cr>', { desc = 'Next item', silent = true })
+vim.keymap.set('n', '<leader>cr', '<cmd>cexpr []<bar>cclose<cr>', { desc = 'Reset', silent = true })
+vim.keymap.set('n', '<leader>cp', '<cmd>cprevious<cr>', { desc = 'Previous item', silent = true })
+vim.keymap.set(
+    'n',
+    '<leader>cd',
+    function() vim.diagnostic.setqflist() end,
+    { desc = 'Set to diagnostics in buffer', silent = true }
+)
+
 -- Toggle
 vim.keymap.set('n', '<leader>tf', '<cmd>ToggleAutoFormatting<cr>', { desc = 'Auto formatting', silent = true })
 vim.keymap.set('n', '<leader>th', '<cmd>ToggleLspInlayHints<cr>', { desc = 'LSP inlay hints', silent = true })

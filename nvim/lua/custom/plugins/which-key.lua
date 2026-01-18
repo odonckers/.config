@@ -5,6 +5,7 @@ return {
         preset = 'helix',
         spec = {
             { '<leader>a', group = 'AI', mode = { 'n', 't', 'i', 'x' } },
+            { '<leader>c', group = 'Quickfix list' },
             { '<leader>d', group = 'Diagnostics' },
             { '<leader>g', group = 'Git' },
             { '<leader>n', group = 'Notes' },
