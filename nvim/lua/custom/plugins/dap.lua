@@ -42,6 +42,7 @@ return {
         'Cliffback/netcoredbg-macOS-arm64.nvim',
         'GustavEikaas/easy-dotnet.nvim',
     },
+    enabled = false,
     config = function()
         local dap = require('dap')
         -- dap.set_log_level('TRACE')

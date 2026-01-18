@@ -2,66 +2,13 @@ return {
     'neovim/nvim-lspconfig',
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
-        -- Configure Lua LSP for neovim config and apis
-        { 'folke/lazydev.nvim', ft = 'lua', config = true },
-
-        -- LSP installer
-        'mason-org/mason.nvim',
-        'mason-org/mason-lspconfig.nvim',
-        'WhoIsSethDaniel/mason-tool-installer.nvim',
-
-        -- Filetree LSP operations
-        {
-            'antosha417/nvim-lsp-file-operations',
-            dependencies = { 'nvim-lua/plenary.nvim' },
-        },
-
-        -- Autoformat
-        'stevearc/conform.nvim',
-
-        -- C# / .NET
-        {
-            'GustavEikaas/easy-dotnet.nvim',
-            dependencies = { 'nvim-lua/plenary.nvim' },
-        },
+        { 'folke/lazydev.nvim', ft = 'lua', config = true }, -- Lua Neovim APIs
+        { 'GustavEikaas/easy-dotnet.nvim', dependencies = { 'nvim-lua/plenary.nvim' } }, -- C# / .NET
+        { 'antosha417/nvim-lsp-file-operations', dependencies = { 'nvim-lua/plenary.nvim' } }, -- Filetree LSP operations
+        'stevearc/conform.nvim', -- Autoformat
     },
     config = function()
-        -- Setup Mason
-        require('mason').setup({
-            registries = { 'github:mason-org/mason-registry', 'github:Crashdummyy/mason-registry' },
-            ui = { border = 'rounded' },
-        })
-
-        -- Filetree LSP operations
         require('lsp-file-operations').setup()
-
-        -- Configure installed LSPs
-        local ensure_installed_servers = {
-            -- Lua
-            'lua_ls',
-
-            -- Web
-            'html',
-            'cssls',
-            'vtsls',
-            'eslint',
-            'angularls',
-
-            -- PHP
-            'phpactor',
-
-            -- Data
-            'jsonls',
-            'graphql',
-
-            -- AI
-            'copilot',
-        }
-        require('mason-lspconfig').setup({ ensure_installed = ensure_installed_servers })
-
-        local ensure_installed_tools = { 'stylua', 'lua_ls' }
-        vim.list_extend(ensure_installed_tools, ensure_installed_servers)
-        require('mason-tool-installer').setup({ ensure_installed = ensure_installed_tools })
 
         -- Lua
         vim.lsp.config('lua_ls', {
@@ -92,16 +39,24 @@ return {
                 Lua = {},
             },
         })
+        vim.lsp.enable('lua_ls')
+
+        -- Web
+        vim.lsp.enable('html')
+        vim.lsp.enable('cssls')
+        vim.lsp.enable('vtsls')
+        vim.lsp.enable('eslint')
+        vim.lsp.enable('angularls')
+        vim.lsp.enable('jsonls')
 
         -- C# / .NET
-        require('easy-dotnet').setup({
-            debugger = {
-                bin_path = vim.fs.joinpath(vim.fn.stdpath('data'), 'mason/bin/netcoredbg'),
-            },
-        })
+        require('easy-dotnet').setup()
+
+        -- Copilot
+        vim.lsp.enable('copilot')
 
         -- Swift (Apple SourceKit LSP)
-        -- Requires being on macOS
+        -- Requires macOS
         vim.lsp.enable('sourcekit')
 
         -- Autoformat
@@ -133,7 +88,6 @@ return {
         })
     end,
     keys = {
-        { '<leader>m', '<cmd>Mason<cr>', desc = 'Open mason', silent = true },
         { '<leader>f', function() require('conform').format() end, desc = 'Format' },
     },
 }
