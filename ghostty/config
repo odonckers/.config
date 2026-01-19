@@ -9,7 +9,7 @@ adjust-cell-height = 12%
 
 # ---- Window layout ------------------------------------------
 
-window-step-resize = false
+window-step-resize = true
 window-save-state = always
 
 # ---- Appearance ---------------------------------------------
@@ -22,7 +22,6 @@ theme = vague
 # ---- OS specific tweaks -------------------------------------
 
 macos-titlebar-proxy-icon = hidden
-macos-non-native-fullscreen = visible-menu
 macos-option-as-alt = left
 macos-icon = xray
 
