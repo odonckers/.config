@@ -1,5 +1,15 @@
-.DS_Store
+# Neovim
 Session.vim
+
+# Personal notes
+SCRATCHPAD.md
+
+# Local mise config
+mise.local.toml
+
+# AI CLI Tools
 .opencode
 **/.claude/settings.local.json
-SCRATCHPAD.md
+
+# Finder (macOS)
+.DS_Store
