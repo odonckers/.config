@@ -10,9 +10,7 @@ return {
         version = version,
         lazy = false,
         opts = {
-            view = {
-                signs = { add = '┃', change = '┃', delete = '┃' },
-            },
+            view = { style = 'number' },
         },
         keys = {
             { '<leader>gd', '<cmd>lua MiniDiff.toggle_overlay()<cr>', desc = 'Diff buffer', silent = true },
