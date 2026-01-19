@@ -5,12 +5,12 @@ return {
         { 'folke/lazydev.nvim', ft = 'lua', config = true }, -- Lua Neovim APIs
         { 'GustavEikaas/easy-dotnet.nvim', dependencies = { 'nvim-lua/plenary.nvim' } }, -- C# / .NET
         { 'antosha417/nvim-lsp-file-operations', dependencies = { 'nvim-lua/plenary.nvim' } }, -- Filetree LSP operations
-        'stevearc/conform.nvim', -- Autoformat
+        'stevearc/conform.nvim', -- Formatting
     },
     config = function()
         require('lsp-file-operations').setup()
 
-        -- Lua
+        -- LuaLS/lua-language-server
         vim.lsp.config('lua_ls', {
             on_init = function(client)
                 if client.workspace_folders then
@@ -41,25 +41,34 @@ return {
         })
         vim.lsp.enable('lua_ls')
 
-        -- Web
+        -- npm:vscode-langservers-extracted
         vim.lsp.enable('html')
         vim.lsp.enable('cssls')
-        vim.lsp.enable('vtsls')
-        vim.lsp.enable('eslint')
-        vim.lsp.enable('angularls')
         vim.lsp.enable('jsonls')
+        vim.lsp.config('eslint', {
+            settings = {
+                useESLintClass = false,
+                experimental = { useFlatConfig = true },
+            },
+        })
+        vim.lsp.enable('eslint')
 
-        -- C# / .NET
+        -- npm:@vtsls/language-server
+        vim.lsp.enable('vtsls')
+
+        -- npm:@angular/language-server
+        vim.lsp.enable('angularls')
+
+        -- dotnet
         require('easy-dotnet').setup()
 
-        -- Copilot
+        -- npm:@github/copilot-language-server
         vim.lsp.enable('copilot')
 
-        -- Swift (Apple SourceKit LSP)
-        -- Requires macOS
+        -- macOS:SourceKit (for swift)
         vim.lsp.enable('sourcekit')
 
-        -- Autoformat
+        -- Formatting
         require('conform').setup({
             formatters_by_ft = {
                 lua = { 'stylua' },

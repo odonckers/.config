@@ -31,6 +31,6 @@ node = "24"
 "npm:@github/copilot" = ["prerelease", "latest"]
 "npm:@github/copilot-language-server" = "latest"
 "npm:@vtsls/language-server" = "latest"
-"npm:@zed-industries/vscode-langservers-extracted" = "latest"
 "npm:typescript" = "latest"
+"npm:vscode-langservers-extracted" = "latest"
 rust = "latest"
