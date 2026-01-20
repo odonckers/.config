@@ -23,7 +23,6 @@ theme = vague
 
 macos-titlebar-proxy-icon = hidden
 macos-option-as-alt = left
-macos-icon = xray
 
 mouse-hide-while-typing = true
 
