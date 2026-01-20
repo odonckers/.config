@@ -21,6 +21,7 @@ theme = vague
 
 # ---- OS specific tweaks -------------------------------------
 
+macos-non-native-fullscreen = padded-notch
 macos-titlebar-proxy-icon = hidden
 macos-option-as-alt = left
 
