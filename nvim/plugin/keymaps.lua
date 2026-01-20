@@ -40,6 +40,9 @@ vim.keymap.set('n', '<C-S-up>', '<C-w>K', { desc = 'Swap top', silent = true })
 vim.keymap.set('n', '<leader>x', '<cmd>edit ~/.config/nvim/init.lua<cr>', { desc = 'Edit config', silent = true })
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Open lazy', silent = true })
 
+-- Buffers
+vim.keymap.set('n', '<leader>bd', '<cmd>bdelete<cr>', { desc = 'Close buffer', silent = true })
+
 -- Quickfix list
 vim.keymap.set('n', '<leader>co', '<cmd>copen<cr>', { desc = 'Open', silent = true })
 vim.keymap.set('n', '<leader>cc', '<cmd>cclose<cr>', { desc = 'Close', silent = true })
