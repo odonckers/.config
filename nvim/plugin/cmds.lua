@@ -23,6 +23,14 @@ vim.api.nvim_create_user_command('ToggleWordWrap', function()
     vim.notify('Toggled word wrap ' .. (vim.opt_local.wrap and 'on' or 'off') .. ' for this buffer')
 end, {})
 
+-- Toggle between expr and indent folding
+vim.api.nvim_create_user_command('ToggleFoldMethod', function()
+    local current = vim.opt_local.foldmethod:get()
+    local new_method = current == 'expr' and 'indent' or 'expr'
+    vim.opt_local.foldmethod = new_method
+    vim.notify('Toggled fold method to ' .. new_method)
+end, {})
+
 -- Toggle LSP virtual lines
 vim.api.nvim_create_user_command('ToggleLspVirtualLines', function()
     local current = vim.diagnostic.config() or {}
