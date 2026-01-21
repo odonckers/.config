@@ -48,6 +48,7 @@ return {
             }),
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
+                { name = 'lazydev', group_index = 0 },
                 { name = 'easy-dotnet' },
                 { name = 'path' },
                 { name = 'buffer' },
