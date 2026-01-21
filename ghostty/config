@@ -23,9 +23,6 @@ window-padding-balance = false
 
 theme = vague
 
-# background-opacity = 0.95
-# background-blur-radius = 20
-
 # ---- OS specific tweaks -------------------------------------
 
 macos-non-native-fullscreen = padded-notch
