@@ -7,6 +7,9 @@ font-family = JetBrainsMono Nerd Font Mono
 font-size = 12
 adjust-cell-height = 12%
 
+font-thicken = true
+font-thicken-strength = 0
+
 # ---- Window layout ------------------------------------------
 
 window-step-resize = true
