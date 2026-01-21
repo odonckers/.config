@@ -56,6 +56,9 @@ vim.keymap.set(
     { desc = 'Set to diagnostics in buffer', silent = true }
 )
 
+-- Git
+vim.keymap.set('n', '<leader>gl', '<cmd>LazyGit<cr>', { desc = 'Open LazyGit', silent = true })
+
 -- Toggle
 vim.keymap.set('n', '<leader>tf', '<cmd>ToggleAutoFormatting<cr>', { desc = 'Auto formatting', silent = true })
 vim.keymap.set('n', '<leader>th', '<cmd>ToggleLspInlayHints<cr>', { desc = 'LSP inlay hints', silent = true })
