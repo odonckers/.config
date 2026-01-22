@@ -71,37 +71,6 @@ vim.opt.fileformats = { 'unix', 'dos', 'mac' } -- Match eof formatting to system
 local undodir = vim.fn.expand('~/.vim/undodir')
 if vim.fn.isdirectory(undodir) == 0 then vim.fn.mkdir(undodir, 'p') end
 
--- LSP and diagnostic visuals
-vim.diagnostic.config({
-    float = {
-        border = 'rounded',
-        focusable = true,
-    },
-    virtual_lines = { current_line = true },
-    virtual_text = false,
-    underline = { severity = vim.diagnostic.severity.WARN },
-    signs = {
-        text = {
-            [vim.diagnostic.severity.ERROR] = ' ',
-            [vim.diagnostic.severity.WARN] = ' ',
-            [vim.diagnostic.severity.HINT] = ' ',
-            [vim.diagnostic.severity.INFO] = ' ',
-        },
-        texthl = {
-            [vim.diagnostic.severity.ERROR] = 'DiagnosticSignError',
-            [vim.diagnostic.severity.WARN] = 'DiagnosticSignWarn',
-            [vim.diagnostic.severity.HINT] = 'DiagnosticSignHint',
-            [vim.diagnostic.severity.INFO] = 'DiagnosticSignInfo',
-        },
-        numhl = {
-            [vim.diagnostic.severity.ERROR] = '',
-            [vim.diagnostic.severity.WARN] = '',
-            [vim.diagnostic.severity.HINT] = '',
-            [vim.diagnostic.severity.INFO] = '',
-        },
-    },
-})
-
 -- Behavior settings
 vim.opt.hidden = true -- Allow hidden buffers
 vim.opt.errorbells = false -- No error bells
@@ -118,7 +87,7 @@ vim.opt.modifiable = true -- Allow buffer modifications
 vim.opt.encoding = 'UTF-8' -- Set encoding
 vim.opt.inccommand = 'split' -- Preview substitutions
 vim.opt.confirm = true -- Confirm dialog for unsaved changes
-vim.opt.fixeol = true -- Remove eol character
+vim.opt.fixeol = false -- Remove eol character
 vim.opt.fixendofline = false -- Fix end of line
 vim.opt.history = 100 -- Remember N lines in history
 vim.cmd('syntax sync minlines=256') -- Limit syntax parsing to N amount of lines

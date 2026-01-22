@@ -74,91 +74,21 @@ return {
             }),
         })
 
-        -- Setup LSP file operations
-        require('lsp-file-operations').setup()
-
-        -- Setup language servers
+        -- Setup LSP capabilities for CMP
         local capabilities = vim.tbl_deep_extend(
             'force',
             vim.lsp.protocol.make_client_capabilities(),
             require('cmp_nvim_lsp').default_capabilities()
         )
+        vim.lsp.config('*', { capabilities = capabilities })
 
-        -- LuaLS/lua-language-server
-        vim.lsp.config('lua_ls', {
-            capabilities = capabilities,
-            on_init = function(client)
-                if client.workspace_folders then
-                    local path = client.workspace_folders[1].name
-                    if
-                        path ~= vim.fn.stdpath('config')
-                        ---@diagnostic disable-next-line: undefined-field
-                        and (vim.uv.fs_stat(path .. '/.luarc.json') or vim.uv.fs_stat(path .. '/.luarc.jsonc'))
-                    then
-                        return
-                    end
-                end
-
-                client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
-                    runtime = {
-                        version = 'LuaJIT',
-                        path = { 'lua/?.lua', 'lua/?/init.lua' },
-                    },
-                    workspace = {
-                        checkThirdParty = false,
-                        library = { vim.env.VIMRUNTIME },
-                    },
-                })
-            end,
-            settings = {
-                Lua = {},
-            },
-        })
-        vim.lsp.enable('lua_ls')
-
-        -- HTML (npm:vscode-langservers-extracted)
-        vim.lsp.config('html', { capabilities = capabilities })
-        vim.lsp.enable('html')
-
-        -- CSS (npm:vscode-langservers-extracted)
-        vim.lsp.config('cssls', { capabilities = capabilities })
-        vim.lsp.enable('cssls')
-
-        -- JSON (npm:vscode-langservers-extracted)
-        vim.lsp.config('jsonls', { capabilities = capabilities })
-        vim.lsp.enable('jsonls')
-
-        -- ESLint (npm:vscode-langservers-extracted)
-        vim.lsp.config('eslint', {
-            capabilities = capabilities,
-            settings = {
-                useESLintClass = false,
-                experimental = { useFlatConfig = true },
-            },
-        })
-        vim.lsp.enable('eslint')
-
-        -- TypeScript / JavaScript (npm:@vtsls/language-server)
-        vim.lsp.config('vtsls', { capabilities = capabilities })
-        vim.lsp.enable('vtsls')
-
-        -- Angular (npm:@angular/language-server)
-        vim.lsp.config('angularls', { capabilities = capabilities })
-        vim.lsp.enable('angularls')
+        -- Setup LSP file operations
+        require('lsp-file-operations').setup()
 
         -- Setup dotnet
-        vim.lsp.config('easy_dotnet', { capabilities = capabilities })
         local easy_dotnet = require('easy-dotnet')
         easy_dotnet.setup()
         cmp.register_source('easy-dotnet', easy_dotnet.package_completion_source)
-
-        -- GitHub Copilot (npm:@github/copilot-language-server)
-        vim.lsp.config('copilot', { capabilities = capabilities })
-        vim.lsp.enable('copilot')
-
-        -- Swift (macOS:SourceKit)
-        vim.lsp.config('sourcekit', { capabilities = capabilities })
-        vim.lsp.enable('sourcekit')
 
         -- Formatting
         require('conform').setup({
