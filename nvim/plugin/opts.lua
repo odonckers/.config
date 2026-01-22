@@ -28,7 +28,6 @@ vim.opt.signcolumn = 'yes' -- Always show sign column
 vim.opt.colorcolumn = '120' -- Show column at 120 characters
 vim.opt.showmatch = true -- Highlight matching brackets
 vim.opt.matchtime = 2 -- How long to show matching bracket
-vim.opt.completeopt = 'menuone,noinsert,noselect' -- Completion options
 vim.opt.showmode = false -- Don't show mode in command line
 vim.opt.pumheight = 10 -- Popup menu height
 vim.opt.winborder = 'rounded' -- Floating window border
