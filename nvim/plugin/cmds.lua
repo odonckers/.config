@@ -11,18 +11,6 @@ vim.api.nvim_create_user_command('ToggleRelativeLineNumbers', function()
     vim.notify('Toggled relative line numbers ' .. (vim.g.relativenumber and 'on' or 'off'))
 end, {})
 
--- Toggle spell check
-vim.api.nvim_create_user_command('ToggleSpellCheck', function()
-    vim.opt_local.spell = not vim.opt_local.spell
-    vim.notify('Toggled spell check ' .. (vim.opt_local.spell and 'on' or 'off') .. ' for this buffer')
-end, {})
-
--- Toggle word wrap
-vim.api.nvim_create_user_command('ToggleWordWrap', function()
-    vim.opt_local.wrap = not vim.opt_local.wrap
-    vim.notify('Toggled word wrap ' .. (vim.opt_local.wrap and 'on' or 'off') .. ' for this buffer')
-end, {})
-
 -- Toggle between expr and indent folding
 vim.api.nvim_create_user_command('ToggleFoldMethod', function()
     local current = vim.opt_local.foldmethod:get()

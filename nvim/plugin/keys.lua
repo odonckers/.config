@@ -68,7 +68,5 @@ vim.keymap.set(
     '<cmd>ToggleRelativeLineNumbers<cr>',
     { desc = 'Relative line numbers', silent = true }
 )
-vim.keymap.set('n', '<leader>ts', '<cmd>ToggleSpellCheck<cr>', { desc = 'Spell check', silent = true })
 vim.keymap.set('n', '<leader>tv', '<cmd>ToggleLspVirtualLines<cr>', { desc = 'LSP virtual lines', silent = true })
-vim.keymap.set('n', '<leader>tw', '<cmd>ToggleWordWrap<cr>', { desc = 'Word wrap', silent = true })
 vim.keymap.set('n', '<leader>tz', '<cmd>ToggleFoldMethod<cr>', { desc = 'Fold method', silent = true })
