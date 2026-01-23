@@ -1,42 +1,30 @@
 shell-integration = zsh
 auto-update-channel = tip
 
-# ---- Fonts --------------------------------------------------
+# ---- Appearance ---------------------------------------------
 
 font-family = JetBrainsMono Nerd Font Mono
 font-size = 12
 adjust-cell-height = 12%
 
-# font-thicken = true
-# font-thicken-strength = 0
+theme = vague
 
 # ---- Window layout ------------------------------------------
 
-window-step-resize = true
-window-save-state = always
+fullscreen = true
 
 window-padding-x = 0
 window-padding-y = 0
 window-padding-balance = false
 
-# ---- Appearance ---------------------------------------------
+window-save-state = never
 
-theme = vague
+window-step-resize = true
 
 # ---- OS specific tweaks -------------------------------------
 
-macos-non-native-fullscreen = padded-notch
-macos-titlebar-proxy-icon = hidden
-macos-option-as-alt = left
-
 mouse-hide-while-typing = true
-
-# ---- Keyboard shortcuts -------------------------------------
-
-# Rename tab title
-keybind = super+shift+i=prompt_tab_title
-
-# Move tabs
-keybind = super+alt+,=move_tab:-1
-keybind = super+alt+.=move_tab:1
+macos-non-native-fullscreen = padded-notch
+macos-titlebar-style = hidden
+macos-option-as-alt = left
 
