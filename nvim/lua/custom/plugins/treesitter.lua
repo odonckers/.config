@@ -39,6 +39,8 @@ return {
     },
     {
         'nvim-treesitter/nvim-treesitter-context',
+        -- TODO: Very buggy and choppy
+        enabled = false,
         opts = {
             mode = 'topline',
         },
