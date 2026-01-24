@@ -10,7 +10,7 @@ return {
             { '<leader>d', group = 'Diagnostics' },
             { '<leader>g', group = 'Git' },
             { '<leader>n', group = 'Notes' },
-            { '<leader>t', group = 'Toggle' },
+            { '<leader>t', group = 'Test' },
         },
     },
     config = function(_, opts) require('which-key').setup(opts) end,
