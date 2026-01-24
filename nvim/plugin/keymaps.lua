@@ -58,15 +58,3 @@ vim.keymap.set(
 
 -- Git
 vim.keymap.set('n', '<leader>gl', '<cmd>LazyGit<cr>', { desc = 'Open LazyGit', silent = true })
-
--- Toggle
-vim.keymap.set('n', '<leader>tf', '<cmd>ToggleAutoFormatting<cr>', { desc = 'Auto formatting', silent = true })
-vim.keymap.set('n', '<leader>th', '<cmd>ToggleLspInlayHints<cr>', { desc = 'LSP inlay hints', silent = true })
-vim.keymap.set(
-    'n',
-    '<leader>tl',
-    '<cmd>ToggleRelativeLineNumbers<cr>',
-    { desc = 'Relative line numbers', silent = true }
-)
-vim.keymap.set('n', '<leader>tv', '<cmd>ToggleLspVirtualLines<cr>', { desc = 'LSP virtual lines', silent = true })
-vim.keymap.set('n', '<leader>tz', '<cmd>ToggleFoldMethod<cr>', { desc = 'Fold method', silent = true })
