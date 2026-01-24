@@ -1,6 +1,4 @@
 -- Custom settings
-vim.g.indentline_char = '│'
-vim.g.lead_char = '·'
 vim.g.relativenumber = false
 
 -- Basic settings
@@ -42,7 +40,7 @@ vim.opt.listchars = { -- Whitespace characters definitions
     tab = '» ',
     trail = '·',
     nbsp = '␣',
-    lead = vim.g.lead_char,
+    lead = '·',
 }
 
 -- File handling

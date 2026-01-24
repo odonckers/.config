@@ -13,7 +13,15 @@ return {
     config = function()
         require('neotest').setup({
             adapters = {
-                require('neotest-jest')(),
+                require('neotest-jest')({
+                    jestConfigFile = 'jest.config.ts',
+                    cwd = function(path)
+                        local current_dir = vim.fn.fnamemodify(path, ':h')
+                        local jest_config = vim.fn.findfile('jest.config.ts', current_dir .. ';')
+                        if jest_config ~= '' then return vim.fn.fnamemodify(jest_config, ':h') end
+                        return vim.fn.getcwd()
+                    end,
+                }),
                 require('neotest-vstest'),
             },
         })
@@ -33,19 +41,16 @@ return {
 
         -- Consumers
         { '<leader>tw', function() require('neotest').watch() end, desc = 'Watch files related to tests' },
-        { '<leader>to', function() require('neotest').output() end, desc = 'Open output window of nearest test' },
-        { '<leader>tp', function() require('neotest').output_panel() end, desc = 'Open ouput panel of tests' },
-
-        -- Summary
         {
-            '<leader>tst',
+            '<leader>to',
+            function() require('neotest').output.open() end,
+            desc = 'Open output window of nearest test',
+        },
+        { '<leader>tp', function() require('neotest').output_panel.toggle() end, desc = 'Toggle ouput panel' },
+        {
+            '<leader>ts',
             function() require('neotest').summary.toggle() end,
             desc = 'Open summary panel of project tests',
         },
-        -- {
-        --     '<leader>tso',
-        --     function() require('neotest').summary.expand end,
-        --     desc = 'Open summary panel of project tests',
-        -- },
     },
 }
