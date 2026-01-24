@@ -32,10 +32,15 @@ fi
 if (( $+commands[git] )); then
   alias g=git
   alias ga="git add"
-  alias gr="git restore"
+  alias gb="git switch"
+  alias gbc="git switch -c"
   alias gc="git commit -m"
   alias gca="git commit -am"
-  alias gp="git push"
+  alias gd="git diff"
+  alias gp="git pull"
+  alias gP="git push"
+  alias gr="git restore"
+  alias gs="git status"
 fi
 (( $+commands[lazygit] )) && alias lg=lazygit
 (( $+commands[ng] )) && source <(ng completion script)
@@ -48,6 +53,7 @@ if (( $+commands[tmux] )); then
 fi
 (( $+commands[zoxide] )) && eval "$(zoxide init zsh)"
 
+alias cdc="cd $XDG_CONFIG_HOME"
 alias l="ls -l --git"
 alias ll="l -ah"
 alias v=vim
