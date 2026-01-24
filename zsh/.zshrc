@@ -28,9 +28,19 @@ fi
 
 (( $+commands[assume] )) && alias assume=". assume"
 (( $+commands[eza] )) && alias ls=eza
-(( $+commands[lazygit] )) && alias g=lazygit
+(( $+commands[gh] )) && alias ghas="gh auth switch"
+if (( $+commands[git] )); then
+  alias g=git
+  alias ga="git add"
+  alias gr="git restore"
+  alias gc="git commit -m"
+  alias gca="git commit -am"
+  alias gp="git push"
+fi
+(( $+commands[lazygit] )) && alias lg=lazygit
 (( $+commands[ng] )) && source <(ng completion script)
 (( $+commands[nvim] )) && alias vim=nvim
+(( $+commands[opencode] )) && alias oc=opencode
 if (( $+commands[tmux] )); then
   alias t=tmux
   alias ta="tmux attach"
