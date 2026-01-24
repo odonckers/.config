@@ -1,6 +1,5 @@
 #!/usr/bin/env zsh
 
-export TERM="xterm-256color"
 export EDITOR="nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
 
