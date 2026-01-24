@@ -28,10 +28,14 @@ fi
 
 (( $+commands[assume] )) && alias assume=". assume"
 (( $+commands[eza] )) && alias ls=eza
-(( $+commands[lazygit] )) && alias lg=lazygit
+(( $+commands[lazygit] )) && alias g=lazygit
 (( $+commands[ng] )) && source <(ng completion script)
 (( $+commands[nvim] )) && alias vim=nvim
-(( $+commands[tmux] )) && alias tmux="tmux -2"
+if (( $+commands[tmux] )); then
+  alias t=tmux
+  alias ta="tmux attach"
+  alias tks="tmux kill-server"
+fi
 (( $+commands[zoxide] )) && eval "$(zoxide init zsh)"
 
 alias l="ls -l --git"
