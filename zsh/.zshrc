@@ -27,6 +27,7 @@ fi
 (( $+commands[lazygit] )) && alias lg=lazygit
 (( $+commands[ng] )) && source <(ng completion script)
 (( $+commands[nvim] )) && alias vim=nvim
+(( $+commands[tmux] )) && alias tmux="tmux -2"
 (( $+commands[zoxide] )) && eval "$(zoxide init zsh)"
 
 alias l="ls -l --git"
