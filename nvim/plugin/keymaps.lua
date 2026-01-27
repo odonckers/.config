@@ -46,9 +46,7 @@ vim.keymap.set('n', '<leader>bd', '<cmd>bdelete<cr>', { desc = 'Close buffer', s
 -- Quickfix list
 vim.keymap.set('n', '<leader>co', '<cmd>copen<cr>', { desc = 'Open', silent = true })
 vim.keymap.set('n', '<leader>cc', '<cmd>cclose<cr>', { desc = 'Close', silent = true })
-vim.keymap.set('n', '<leader>cn', '<cmd>cnext<cr>', { desc = 'Next item', silent = true })
 vim.keymap.set('n', '<leader>cr', '<cmd>cexpr []<bar>cclose<cr>', { desc = 'Reset', silent = true })
-vim.keymap.set('n', '<leader>cp', '<cmd>cprevious<cr>', { desc = 'Previous item', silent = true })
 vim.keymap.set(
     'n',
     '<leader>cd',
