@@ -6,15 +6,16 @@ font-size = 12
 adjust-cell-width = -4%
 adjust-cell-height = 12%
 
+title = " "
+
 theme = vague
 
 window-padding-x = 0
 window-padding-y = 0
-window-padding-balance = false
+window-padding-balance = true
 
 mouse-hide-while-typing = true
 
-macos-non-native-fullscreen = padded-notch
-macos-titlebar-style = hidden
+macos-non-native-fullscreen = visible-menu
 macos-option-as-alt = left
-macos-window-shadow = true
+macos-titlebar-proxy-icon = hidden

@@ -26,7 +26,6 @@ vim.opt.signcolumn = 'yes' -- Always show sign column
 vim.opt.colorcolumn = '120' -- Show column at 120 characters
 vim.opt.showmatch = true -- Highlight matching brackets
 vim.opt.matchtime = 2 -- How long to show matching bracket
-vim.opt.showmode = false -- Don't show mode in command line
 vim.opt.pumheight = 10 -- Popup menu height
 vim.opt.winborder = 'rounded' -- Floating window border
 vim.opt.synmaxcol = 300 -- Syntax highlighting limit
@@ -63,25 +62,12 @@ vim.opt.mouse = 'a' -- Enable mouse support
 vim.schedule(function() vim.opt.clipboard:append('unnamedplus') end) -- Use system clipboard
 vim.opt.inccommand = 'split' -- Preview substitutions
 vim.opt.confirm = true -- Confirm dialog for unsaved changes
-vim.opt.fixendofline = false -- Remove eol character from line
-vim.opt.history = 100 -- Remember N lines in history
 vim.cmd('syntax sync minlines=256') -- Limit syntax parsing to N amount of lines
 
 -- Folding settings
-vim.opt.foldmethod = 'expr' -- Use expression for folding
-vim.opt.foldexpr = 'nvim_treesitter#foldexpr()' -- Use treesitter for folding
-vim.opt.foldlevel = 99 -- Start with all folds open
-
--- Split behavior
-vim.opt.splitbelow = true -- Horizontal splits go below
-vim.opt.splitright = true -- Vertical splits go right
-
--- Command-line completion
-vim.opt.wildmode = 'longest:full,full'
-vim.opt.wildignore:append({ '*.o', '*.obj', '*.pyc', '*.class', '*.jar' })
-
--- Better diff options
-vim.opt.diffopt:append('linematch:60')
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.foldlevelstart = 99
 
 -- Performance improvements
 vim.opt.redrawtime = 10000

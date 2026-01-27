@@ -21,6 +21,4 @@ return {
     -- Appearance
     { 'nvim-mini/mini.icons', version = version, config = true }, -- Icon provider
     { 'nvim-mini/mini.starter', version = version, config = true }, -- Start screen
-    { 'nvim-mini/mini.statusline', version = version, config = true }, -- Statusline
-    { 'nvim-mini/mini.tabline', version = version, config = true }, -- Tabline
 }
