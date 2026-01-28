@@ -5,17 +5,6 @@ return {
     { 'nvim-mini/mini.surround', version = version, config = true }, -- Surround actions
 
     -- General workflow
-    {
-        'nvim-mini/mini.diff', -- Work with diff hunks
-        version = version,
-        lazy = false,
-        opts = {
-            view = { style = 'number' },
-        },
-        keys = {
-            { '<leader>gd', '<cmd>lua MiniDiff.toggle_overlay()<cr>', desc = 'Diff buffer', silent = true },
-        },
-    },
     { 'nvim-mini/mini.sessions', version = version, config = true }, -- Session management
 
     -- Appearance
