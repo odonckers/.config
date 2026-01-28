@@ -5,7 +5,11 @@ return {
         preset = 'helix',
         spec = {
             { '<leader>a', group = 'AI', mode = { 'n', 't', 'i', 'x' } },
-            { '<leader>b', group = 'Buffers' },
+            {
+                '<leader>b',
+                group = 'Buffers',
+                expand = function() return require('which-key.extras').expand.buf() end,
+            },
             { '<leader>c', group = 'Quickfix list' },
             { '<leader>d', group = 'Diagnostics' },
             { '<leader>g', group = 'Git' },
