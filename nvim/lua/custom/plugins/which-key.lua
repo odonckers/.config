@@ -11,6 +11,7 @@ return {
             { '<leader>g', group = 'Git' },
             { '<leader>n', group = 'Notes' },
             { '<leader>t', group = 'Test' },
+            { '<leader>w', proxy = '<C-w>', group = 'Windows' },
         },
     },
     config = function(_, opts) require('which-key').setup(opts) end,
