@@ -26,6 +26,7 @@ node = "24"
 "npm:@github/copilot" = ["prerelease", "latest"]
 "npm:@github/copilot-language-server" = "latest"
 "npm:@vtsls/language-server" = "latest"
+"npm:tree-sitter-cli" = "latest"
 "npm:typescript" = "latest"
 "npm:vscode-langservers-extracted" = "latest"
 opencode = "latest"
