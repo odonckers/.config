@@ -4,10 +4,6 @@ return {
     { 'nvim-mini/mini.move', version = version, config = true }, -- Move any selection in any direction
     { 'nvim-mini/mini.surround', version = version, config = true }, -- Surround actions
 
-    -- General workflow
-    { 'nvim-mini/mini.sessions', version = version, config = true }, -- Session management
-
     -- Appearance
     { 'nvim-mini/mini.icons', version = version, config = true }, -- Icon provider
-    { 'nvim-mini/mini.starter', version = version, config = true }, -- Start screen
 }

@@ -57,6 +57,7 @@ alias cdc="cd $XDG_CONFIG_HOME"
 alias l="ls -l --git"
 alias ll="l -ah"
 alias v=vim
+alias vs="vim -S"
 
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
 
