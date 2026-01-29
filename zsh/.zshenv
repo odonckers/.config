@@ -31,5 +31,6 @@ export PATH="$PATH:$DOTNET_CLI_HOME/tools"
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 export PATH="$PATH:$HOME/.opencode/bin"
+export PATH="$PATH:$XDG_CONFIG_HOME/scripts/bin"
 
 [[ -f $HOME/.zshenv.local ]] && source $HOME/.zshenv.local
