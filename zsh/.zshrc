@@ -4,21 +4,13 @@ if [[ -n $GHOSTTY_RESOURCES_DIR ]]; then
   source "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration
 fi
 
-if [[ -d $HOME/.oh-my-zsh ]]; then
-  export ZSH=$HOME/.oh-my-zsh
+if [[ -d "$XDG_DATA_HOME/oh-my-zsh" ]]; then
+  export ZSH="$XDG_DATA_HOME/oh-my-zsh"
   ZSH_THEME=robbyrussell
   source $ZSH/oh-my-zsh.sh
-fi
-
-typeset -aU fpath
-fpath=(~/.completions $fpath)
-[[ -d $HOME/.docker ]] && fpath=($HOME/.docker/completions $fpath)
-
-autoload -Uz compinit
-if [[ -n ${ZDOTDIR}/.zcompdump(#qNmh+24) ]]; then
-  compinit
 else
-  compinit -C
+  autoload -Uz compinit
+  compinit -d "$ZSH_COMPDUMP"
 fi
 
 if (( $+commands[mise] )); then
@@ -44,13 +36,17 @@ if (( $+commands[git] )); then
 fi
 (( $+commands[lazygit] )) && alias lg=lazygit
 (( $+commands[ng] )) && source <(ng completion script)
-(( $+commands[nvim] )) && alias vim=nvim
+if (( $+commands[nvim] )); then
+  alias vim=nvim
+  export EDITOR="nvim"
+fi
 (( $+commands[opencode] )) && alias oc=opencode
 if (( $+commands[tmux] )); then
   alias t=tmux
   alias ta="tmux attach"
   alias tks="tmux kill-server"
 fi
+(( $+commands[wget] )) && alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 (( $+commands[zoxide] )) && eval "$(zoxide init zsh)"
 
 alias cdc="cd $XDG_CONFIG_HOME"

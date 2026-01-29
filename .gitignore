@@ -11,7 +11,7 @@
 !.gitignore
 !README.md
 !/ghostty
-!/git
+!/git/ignore
 !/ideavim
 !/kitty
 !/lazygit
