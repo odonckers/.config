@@ -2,6 +2,7 @@
 aws-cli = { version = "latest", symlink_bins = "true" }
 aws-iam-authenticator = "latest"
 bat = "latest"
+"cargo:cargo-generate" = "latest"
 delta = "latest"
 dotnet = "10"
 eza = "latest"

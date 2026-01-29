@@ -1,6 +1,5 @@
 vim.lsp.enable({
     'lua_ls', -- LuaLS/lua-language-server
-    'rust_analyzer', -- rust_analyzer
     'vtsls', -- npm:@vtsls/language-server
     'angularls', -- npm:@angular/language-server
     'copilot', -- npm:@github/copilot-language-server
