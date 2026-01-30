@@ -15,7 +15,7 @@
 
 # And these directories
 !/ghostty
-!/git/ignore
+!/git
 !/homebrew
 !/ideavim
 !/installers
@@ -29,3 +29,4 @@
 
 # But ignore this file without the allowed path
 /nvim/lazy-lock.json
+/git/config
