@@ -13,11 +13,6 @@ else
   compinit -d "$ZSH_COMPDUMP"
 fi
 
-if (( $+commands[mise] )); then
-  eval "$(mise activate zsh)"
-  alias mx="mise exec --"
-fi
-
 (( $+commands[assume] )) && alias assume=". assume"
 (( $+commands[eza] )) && alias ls=eza
 (( $+commands[gh] )) && alias ghas="gh auth switch"
