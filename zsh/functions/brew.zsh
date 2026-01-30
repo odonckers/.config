@@ -4,6 +4,10 @@ brew-backup() {
   brew bundle dump --global --force
 }
 
+brew-restore() {
+  brew bundle install
+}
+
 brew-install() {
   : "${1? brew-install [options] formula|cask [...]}"
   brew install $1

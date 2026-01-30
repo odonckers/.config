@@ -1,12 +1,12 @@
 #!/usr/bin/env zsh
 
-npm-bundle-dump() {
+npm-backup() {
   NPMFILE="$XDG_CONFIG_HOME/npm/npmfile"
   mkdir -p $(dirname $NPMFILE)
   npm list --json --global --depth=0 | jq -r '.dependencies | keys[]' > $NPMFILE
 }
 
-npm-bundle-install() {
+npm-restore() {
   NPMFILE="$XDG_CONFIG_HOME/npm/npmfile"
   if [ ! -f "$NPMFILE" ]; then
       echo "Error: npmfile not found at $NPMFILE"
