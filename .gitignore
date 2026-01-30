@@ -10,6 +10,10 @@
 # Except these files
 !.gitignore
 !README.md
+!configure.sh
+!install.sh
+
+# And these directories
 !/ghostty
 !/git/ignore
 !/homebrew
@@ -19,7 +23,6 @@
 !/lazygit
 !/npm
 !/nvim
-!/setup.sh
 !/tmux
 !/wallpapers
 !/zsh

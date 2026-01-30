@@ -5,7 +5,7 @@ brew-backup() {
 }
 
 brew-restore() {
-  brew bundle install
+  brew bundle install --global
 }
 
 brew-install() {
