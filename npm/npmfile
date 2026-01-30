@@ -1,0 +1,6 @@
+@angular/language-server
+@github/copilot-language-server
+@vtsls/language-server
+npm
+typescript
+vscode-langservers-extracted

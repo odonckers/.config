@@ -57,6 +57,7 @@ alias vs="vim -S"
 
 source $XDG_CONFIG_HOME/zsh/functions/brew.zsh
 source $XDG_CONFIG_HOME/zsh/functions/ide.zsh
+source $XDG_CONFIG_HOME/zsh/functions/npm.zsh
 
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
 
