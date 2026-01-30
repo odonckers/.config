@@ -1,10 +1,13 @@
 tap "alajmo/mani"
+tap "jstkdng/programs"
 # CLI tool for Angular
 brew "angular-cli"
 # Use AWS IAM credentials to authenticate to Kubernetes
 brew "aws-iam-authenticator"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Versatile and fast Unicode/ASCII/ANSI graphics renderer
+brew "chafa"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
@@ -53,6 +56,8 @@ brew "tmux"
 brew "tree-sitter-cli"
 # Subversion-like utility to work with Jackrabbit FileVault
 brew "vault-cli"
+# Simple terminal image viewer written in Rust
+brew "viu"
 # Watch files and take action when they change
 brew "watchman"
 # Internet file retriever
@@ -63,6 +68,8 @@ brew "xcodegen"
 brew "xdg-ninja"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Drop in replacement for ueberzug written in C++
+brew "jstkdng/programs/ueberzugpp"
 # Tools for building Android applications
 cask "android-studio"
 # Application uninstaller
