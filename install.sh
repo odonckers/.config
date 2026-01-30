@@ -19,4 +19,5 @@ ln -s $XDG_CONFIG_HOME/zsh/.zshenv $HOME/.zshenv
 source $HOME/.zshenv
 source $HOME/.zshrc
 
-brew bundle install --global
+brew-restore
+npm-restore
