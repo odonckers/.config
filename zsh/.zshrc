@@ -19,7 +19,6 @@ if (( $+commands[mise] )); then
 fi
 
 (( $+commands[assume] )) && alias assume=". assume"
-(( $+commands[brew] )) && source $XDG_CONFIG_HOME/zsh/functions/brew
 (( $+commands[eza] )) && alias ls=eza
 (( $+commands[gh] )) && alias ghas="gh auth switch"
 if (( $+commands[git] )); then
@@ -55,6 +54,9 @@ alias l="ls -l --git"
 alias ll="l -ah"
 alias v=vim
 alias vs="vim -S"
+
+source $XDG_CONFIG_HOME/zsh/functions/brew.sh
+source $XDG_CONFIG_HOME/zsh/functions/ide.sh
 
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
 

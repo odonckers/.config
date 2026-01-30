@@ -28,11 +28,10 @@ export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$DOTNET_CLI_HOME/tools"
-export PATH="$PATH:/opt/homebrew/opt/node@24/bin"
+export PATH="$PATH:$HOMEBREW_PREFIX/opt/node@24/bin"
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 export PATH="$PATH:$HOME/.opencode/bin"
-export PATH="$PATH:$XDG_CONFIG_HOME/scripts/bin"
 
 (( $+commands[brew] )) && eval $(brew shellenv)
 
