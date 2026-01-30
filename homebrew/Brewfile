@@ -55,6 +55,8 @@ brew "stylua"
 brew "tmux"
 # Parser generator tool
 brew "tree-sitter-cli"
+# Maintained ctags implementation
+brew "universal-ctags"
 # Simple terminal image viewer written in Rust
 brew "viu"
 # Watch files and take action when they change
