@@ -33,4 +33,16 @@ export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 export PATH="$PATH:$HOME/.opencode/bin"
 export PATH="$PATH:$XDG_CONFIG_HOME/scripts/bin"
 
+if (( $+commands[brew] )); then
+  eval $(brew shellenv)
+
+  export HOMEBREW_BUNDLE_INSTALL_CLEANUP=true
+
+  export HOMEBREW_BUNDLE_DUMP_NO_VSCODE=true
+  export HOMEBREW_BUNDLE_DUMP_NO_FLATPAK=true
+  export HOMEBREW_BUNDLE_DUMP_DESCRIBE=true
+fi
+
+[[ -f "$XDG_DATA_HOME/cargo/env" ]] && source "$XDG_DATA_HOME/cargo/env"
+
 [[ -f $HOME/.zshenv.local ]] && source $HOME/.zshenv.local
