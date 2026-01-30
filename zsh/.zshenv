@@ -23,25 +23,18 @@ export ANDROID_USER_HOME="$XDG_DATA_HOME/android"
 
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 
-export PATH="$PATH:/opt/homebrew/bin"
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$DOTNET_CLI_HOME/tools"
+export PATH="$PATH:/opt/homebrew/opt/node@24/bin"
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 export PATH="$PATH:$HOME/.opencode/bin"
 export PATH="$PATH:$XDG_CONFIG_HOME/scripts/bin"
 
-if (( $+commands[brew] )); then
-  eval $(brew shellenv)
-
-  export HOMEBREW_BUNDLE_INSTALL_CLEANUP=true
-
-  export HOMEBREW_BUNDLE_DUMP_NO_VSCODE=true
-  export HOMEBREW_BUNDLE_DUMP_NO_FLATPAK=true
-  export HOMEBREW_BUNDLE_DUMP_DESCRIBE=true
-fi
+(( $+commands[brew] )) && eval $(brew shellenv)
 
 [[ -f "$XDG_DATA_HOME/cargo/env" ]] && source "$XDG_DATA_HOME/cargo/env"
 

@@ -1,8 +1,58 @@
 tap "alajmo/mani"
+# CLI tool for Angular
+brew "angular-cli"
+# Use AWS IAM credentials to authenticate to Kubernetes
+brew "aws-iam-authenticator"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Modern, maintained replacement for ls
+brew "eza"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GitHub command-line tool
+brew "gh"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Git extension for versioning large files
+brew "git-lfs"
+# Easiest way to access your cloud
+brew "granted"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Modern load testing tool, using Go and JavaScript
+brew "k6"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Language Server for the Lua language
+brew "lua-language-server"
+# Package manager for the Lua programming language
+brew "luarocks"
+# CLI tool to help you manage repositories
+brew "mani"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node@24"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# AI coding agent, built for the terminal
+brew "opencode"
 # General-purpose scripting language
 brew "php"
+# Experimental Rust compiler front-end for IDEs
+brew "rust-analyzer"
+# Opinionated Lua code formatter
+brew "stylua"
 # Terminal multiplexer
 brew "tmux"
+# Parser generator tool
+brew "tree-sitter-cli"
+# Subversion-like utility to work with Jackrabbit FileVault
+brew "vault-cli"
 # Watch files and take action when they change
 brew "watchman"
 # Internet file retriever
@@ -11,10 +61,14 @@ brew "wget"
 brew "xcodegen"
 # Check your $HOME for unwanted files and directories
 brew "xdg-ninja"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # Tools for building Android applications
 cask "android-studio"
 # Application uninstaller
 cask "appcleaner"
+# Brings the power of Copilot coding agent directly to your terminal
+cask "copilot-cli@prerelease"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
 # App to build and share containerised applications and microservices
@@ -53,5 +107,7 @@ cask "whatsapp"
 cask "zed"
 # Video communication and virtual meeting platform
 cask "zoom"
-go "cmd/go"
-go "cmd/gofmt"
+go "golang.org/x/tools/cmd/goimports"
+go "golang.org/x/tools/gopls"
+go "mvdan.cc/sh/v3/cmd/shfmt"
+go "honnef.co/go/tools/cmd/staticcheck"
