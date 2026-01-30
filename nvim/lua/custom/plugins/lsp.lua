@@ -15,6 +15,7 @@ return {
 
         -- Language support
         { 'folke/lazydev.nvim', ft = 'lua', config = true },
+        { 'mrcjkb/rustaceanvim', version = '^7', lazy = false },
         { 'GustavEikaas/easy-dotnet.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
         { 'antosha417/nvim-lsp-file-operations', dependencies = { 'nvim-lua/plenary.nvim' } },
 
@@ -102,18 +103,9 @@ return {
                 go = { 'goimports', 'gofmt' },
             },
             format_on_save = function(bufnr)
-                local ignore_filetypes = {
-                    'sql',
-                    'typescript', -- handled by eslint
-                    'javascript', -- handled by eslint
-                }
-
-                if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then return end
                 if vim.b.autofmt == false then return end
-
                 local bufname = vim.api.nvim_buf_get_name(bufnr)
                 if bufname:match('/node_modules/') then return end
-
                 return { timeout_ms = 1000, lsp_format = 'never' }
             end,
         })
