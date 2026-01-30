@@ -55,8 +55,8 @@ alias ll="l -ah"
 alias v=vim
 alias vs="vim -S"
 
-source $XDG_CONFIG_HOME/zsh/functions/brew.sh
-source $XDG_CONFIG_HOME/zsh/functions/ide.sh
+source $XDG_CONFIG_HOME/zsh/functions/brew.zsh
+source $XDG_CONFIG_HOME/zsh/functions/ide.zsh
 
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
 
