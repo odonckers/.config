@@ -1,4 +1,5 @@
 tap "alajmo/mani"
+tap "hashicorp/tap"
 tap "jstkdng/programs"
 # CLI tool for Angular
 brew "angular-cli"
@@ -54,8 +55,6 @@ brew "stylua"
 brew "tmux"
 # Parser generator tool
 brew "tree-sitter-cli"
-# Subversion-like utility to work with Jackrabbit FileVault
-brew "vault-cli"
 # Simple terminal image viewer written in Rust
 brew "viu"
 # Watch files and take action when they change
@@ -68,6 +67,8 @@ brew "xcodegen"
 brew "xdg-ninja"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Vault
+brew "hashicorp/tap/vault"
 # Drop in replacement for ueberzug written in C++
 brew "jstkdng/programs/ueberzugpp"
 # Tools for building Android applications
