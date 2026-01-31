@@ -10,7 +10,7 @@
 # Except these files
 !.gitignore
 !README.md
-!configure.sh
+!configure_macos.sh
 !install.sh
 
 # And these directories
