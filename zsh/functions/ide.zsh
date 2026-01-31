@@ -1,20 +1,18 @@
 #!/usr/bin/env zsh
 
 ide() {
-  # Check if a session name/directory was provided
-  if [ -z "$1" ]; then
-      echo "Usage: ide <directory_name>"
-      exit 1
+  SESSION_NAME=$1
+  if [ -z "$SESSION_NAME" ]; then
+      echo "Usage: ide <zoxide_directory>"
+      echo ""
+      return 1
   fi
 
-  SESSION_NAME=$1
-
-  # Use zoxide to find the path (query the database)
   TARGET_DIR=$(zoxide query $SESSION_NAME)
-
   if [ -z "$TARGET_DIR" ]; then
       echo "Error: Directory '$SESSION_NAME' not found in zoxide."
-      exit 1
+      echo ""
+      return 1
   fi
 
   # Create a new detached session and name the first window 'vim'

@@ -10,11 +10,14 @@ npm-restore() {
   NPMFILE="$XDG_CONFIG_HOME/npm/npmfile"
   if [ ! -f "$NPMFILE" ]; then
       echo "Error: npmfile not found at $NPMFILE"
+      echo ""
       return 1
   fi
   if [ ! -s "$NPMFILE" ]; then
       echo "Error: npmfile is empty"
+      echo ""
       return 1
   fi
+
   npm install --global $(cat "$XDG_CONFIG_HOME/npm/npmfile")
 }
