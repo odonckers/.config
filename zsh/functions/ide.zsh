@@ -3,7 +3,7 @@
 ide() {
   # Check if a session name/directory was provided
   if [ -z "$1" ]; then
-      echo "Usage: ide.sh <directory_name>"
+      echo "Usage: ide <directory_name>"
       exit 1
   fi
 
