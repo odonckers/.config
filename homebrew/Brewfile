@@ -105,6 +105,8 @@ cask "microsoft-teams"
 cask "obsidian"
 # Music streaming service
 cask "spotify"
+# Real time file synchronisation software
+cask "syncthing-app"
 # Virtual machines UI using QEMU
 cask "utm"
 # Open-source code editor
