@@ -3,6 +3,7 @@ return {
     lazy = false,
     opts = {
         preset = 'helix',
+        icons = { mappings = false },
         spec = {
             { '<leader>a', group = 'AI', mode = { 'n', 't', 'i', 'x' } },
             {

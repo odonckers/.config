@@ -23,15 +23,15 @@ export ANDROID_USER_HOME="$XDG_DATA_HOME/android"
 
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 
-export PATH="$HOMEBREW_PREFIX/bin:$PATH"
-export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$DOTNET_CLI_HOME/tools"
 export PATH="$PATH:$HOMEBREW_PREFIX/opt/node@24/bin"
+export PATH="$PATH:$XDG_DATA_HOME/opencode/bin"
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
-export PATH="$PATH:$XDG_DATA_HOME/opencode/bin"
+export PATH="$PATH:/usr/local/bin"
+export PATH="$HOMEBREW_PREFIX/bin:$PATH"
 
 (( $+commands[brew] )) && eval $(brew shellenv)
 
