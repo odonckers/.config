@@ -27,7 +27,9 @@
 !/wallpapers
 !/zsh
 
-# But ignore this file without the allowed path
+# But ignore these files without the allowed path
 /git/config
 /nvim/lazy-lock.json
-/zsh/*.local
+
+# And always ignore .local files
+*.local
