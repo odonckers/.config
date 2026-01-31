@@ -17,6 +17,3 @@ cd build/
 CC=clang CXX=clang++ cmake .. -DCMAKE_INSTALL_PREFIX=$PWD/../bin
 make
 make install
-
-# Symlink to bin
-ln -sf $NETCOREDBG_DIR/bin/* $HOME/.local/bin/
