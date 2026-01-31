@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 export XDG_CONFIG_HOME="$HOME/.config" && mkdir -p $XDG_CONFIG_HOME
 export XDG_DATA_HOME="$HOME/.local/share" && mkdir -p $XDG_DATA_HOME
 export XDG_STATE_HOME="$HOME/.local/state" && mkdir -p $XDG_STATE_HOME
@@ -12,6 +14,7 @@ export HISTFILE="$XDG_STATE_HOME/zsh/history"
 
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+source "$XDG_DATA_HOME/cargo/env"
 
 export GOPATH="$XDG_DATA_HOME/go"
 
@@ -32,9 +35,5 @@ export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$HOMEBREW_PREFIX/bin:$PATH"
-
-(( $+commands[brew] )) && eval $(brew shellenv)
-
-[[ -f "$XDG_DATA_HOME/cargo/env" ]] && source "$XDG_DATA_HOME/cargo/env"
 
 [[ -f $HOME/.zshenv.local ]] && source $HOME/.zshenv.local

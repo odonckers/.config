@@ -10,6 +10,8 @@ title = " "
 
 theme = vague
 
+window-save-state = never
+
 window-step-resize = false
 
 window-padding-x = 0

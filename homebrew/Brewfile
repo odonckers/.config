@@ -21,6 +21,8 @@ brew "gh"
 brew "git-delta"
 # Git extension for versioning large files
 brew "git-lfs"
+# Audit git repos for secrets
+brew "gitleaks"
 # Easiest way to access your cloud
 brew "granted"
 # Lightweight and flexible command-line JSON processor
@@ -51,8 +53,12 @@ brew "php"
 brew "rust-analyzer"
 # Opinionated Lua code formatter
 brew "stylua"
+# Open source continuous file synchronization application
+brew "syncthing", restart_service: :changed
 # Terminal multiplexer
 brew "tmux"
+# Manage complex tmux sessions easily
+brew "tmuxinator"
 # Parser generator tool
 brew "tree-sitter-cli"
 # Maintained ctags implementation
@@ -69,6 +75,8 @@ brew "xcodegen"
 brew "xdg-ninja"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# UNIX shell (command interpreter)
+brew "zsh"
 # Vault
 brew "hashicorp/tap/vault"
 # Drop in replacement for ueberzug written in C++
@@ -105,8 +113,6 @@ cask "microsoft-teams"
 cask "obsidian"
 # Music streaming service
 cask "spotify"
-# Real time file synchronisation software
-cask "syncthing-app"
 # Virtual machines UI using QEMU
 cask "utm"
 # Open-source code editor

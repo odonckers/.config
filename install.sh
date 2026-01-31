@@ -21,3 +21,8 @@ source $HOME/.zshrc
 
 brew-restore
 npm-restore
+
+sudo sh -c 'echo /opt/homebrew/bin/zsh >> /etc/shells'
+chsh -s /opt/homebrew/bin/zsh
+
+gitleaks detect --source $XDG_CONFIG_HOME
