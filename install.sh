@@ -13,8 +13,8 @@ XDG_CONFIG_HOME="$HOME/.config"
 . $XDG_CONFIG_HOME/installers/netcoredbg.sh
 . $XDG_CONFIG_HOME/installers/oh-my-zsh.sh
 
-ln -s $XDG_CONFIG_HOME/zsh/.zshrc $HOME/.zshrc
-ln -s $XDG_CONFIG_HOME/zsh/.zshenv $HOME/.zshenv
+echo 'source $HOME/.config/zsh/zshrc' >> $HOME/.zshrc
+echo 'source $HOME/.config/zsh/zshenv' >> $HOME/.zshenv
 
 source $HOME/.zshenv
 source $HOME/.zshrc

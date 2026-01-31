@@ -36,4 +36,4 @@ export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$HOMEBREW_PREFIX/bin:$PATH"
 
-[[ -f $HOME/.zshenv.local ]] && source $HOME/.zshenv.local
+[[ -f $XDG_CONFIG_HOME/zsh/zshenv.local ]] && source $XDG_CONFIG_HOME/zsh/zshenv.local

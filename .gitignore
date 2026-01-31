@@ -28,5 +28,6 @@
 !/zsh
 
 # But ignore this file without the allowed path
-/nvim/lazy-lock.json
 /git/config
+/nvim/lazy-lock.json
+/zsh/*.local

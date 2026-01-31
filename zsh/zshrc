@@ -55,6 +55,6 @@ source $XDG_CONFIG_HOME/zsh/functions/ide.zsh
 source $XDG_CONFIG_HOME/zsh/functions/npm.zsh
 source $XDG_CONFIG_HOME/zsh/functions/port.zsh
 
-[[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
-
 set -o vi
+
+[[ -f $XDG_CONFIG_HOME/zsh/zshrc.local ]] && source $XDG_CONFIG_HOME/zsh/zshrc.local
