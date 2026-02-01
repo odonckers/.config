@@ -116,6 +116,8 @@ cask "microsoft-teams"
 cask "obsidian"
 # Music streaming service
 cask "spotify"
+# Video game digital distribution service
+cask "steam"
 # Virtual machines UI using QEMU
 cask "utm"
 # Open-source code editor
