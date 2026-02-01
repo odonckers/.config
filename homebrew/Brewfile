@@ -1,6 +1,7 @@
 tap "alajmo/mani"
 tap "hashicorp/tap"
 tap "jstkdng/programs"
+tap "nikitabobko/tap"
 # CLI tool for Angular
 brew "angular-cli"
 # Use AWS IAM credentials to authenticate to Kubernetes
@@ -81,6 +82,8 @@ brew "zsh"
 brew "hashicorp/tap/vault"
 # Drop in replacement for ueberzug written in C++
 brew "jstkdng/programs/ueberzugpp"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "nikitabobko/tap/aerospace"
 # Tools for building Android applications
 cask "android-studio"
 # Application uninstaller

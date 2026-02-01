@@ -14,6 +14,7 @@
 !install.sh
 
 # And these directories
+!/aerospace
 !/ghostty
 !/git
 !/homebrew
