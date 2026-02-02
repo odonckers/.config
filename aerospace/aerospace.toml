@@ -46,15 +46,15 @@ persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 # See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [workspace-to-monitor-force-assignment]
-    1 = 'main'
+    1 = ['built-in', 'main']
     2 = 'main'
     3 = 'main'
     4 = 'main'
     5 = 'main'
     6 = 'main'
     7 = 'main'
-    8 = ['secondary', 'built-in', 'main']
-    9 = ['secondary', 'built-in', 'main']
+    8 = ['secondary', 'main']
+    9 = ['secondary', 'main']
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
