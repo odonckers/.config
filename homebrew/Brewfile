@@ -2,8 +2,6 @@ tap "alajmo/mani"
 tap "hashicorp/tap"
 tap "jstkdng/programs"
 tap "nikitabobko/tap"
-# CLI tool for Angular
-brew "angular-cli"
 # Use AWS IAM credentials to authenticate to Kubernetes
 brew "aws-iam-authenticator"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -40,10 +38,10 @@ brew "lua-language-server"
 brew "luarocks"
 # CLI tool to help you manage repositories
 brew "mani"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Open-source, cross-platform JavaScript runtime environment
-brew "node@24"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # AI coding agent, built for the terminal

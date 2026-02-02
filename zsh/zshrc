@@ -30,7 +30,6 @@ if (( $+commands[git] )); then
   alias gs="git status"
 fi
 (( $+commands[lazygit] )) && alias lg=lazygit
-(( $+commands[ng] )) && source <(ng completion script)
 if (( $+commands[nvim] )); then
   alias vim=nvim
   export EDITOR="nvim"
@@ -42,9 +41,12 @@ if (( $+commands[tmux] )); then
   alias tks="tmux kill-server"
 fi
 (( $+commands[wget] )) && alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+
+(( $+commands[ng] )) && source <(ng completion script)
+
+(( $+commands[mise] )) && eval "$(mise activate zsh)"
 (( $+commands[zoxide] )) && eval "$(zoxide init zsh)"
 
-alias cdc="cd $XDG_CONFIG_HOME"
 alias l="ls -l --git"
 alias ll="l -ah"
 alias v=vim
@@ -52,7 +54,6 @@ alias vs="vim -S"
 
 source $XDG_CONFIG_HOME/zsh/functions/brew.zsh
 source $XDG_CONFIG_HOME/zsh/functions/ide.zsh
-source $XDG_CONFIG_HOME/zsh/functions/npm.zsh
 source $XDG_CONFIG_HOME/zsh/functions/port.zsh
 
 set -o vi
