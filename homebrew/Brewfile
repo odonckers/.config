@@ -60,6 +60,8 @@ brew "syncthing", restart_service: :changed
 brew "tmux"
 # Manage complex tmux sessions easily
 brew "tmuxinator"
+# Plugin manager for tmux
+brew "tpm"
 # Parser generator tool
 brew "tree-sitter-cli"
 # Maintained ctags implementation

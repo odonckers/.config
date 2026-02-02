@@ -31,6 +31,7 @@
 # But ignore these files without the allowed path
 /git/config
 /nvim/lazy-lock.json
+/tmux/plugins
 
 # And always ignore .local files
 *.local
