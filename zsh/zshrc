@@ -13,7 +13,14 @@ else
   compinit -d "$ZSH_COMPDUMP"
 fi
 
+(( $+commands[mise] )) && eval "$(mise activate zsh)"
+
 (( $+commands[assume] )) && alias assume=". assume"
+if (( $+commands[dotnet] )); then
+  alias d=dotnet
+  alias dr="dotnet run"
+  alias df="dotnet format"
+fi
 (( $+commands[eza] )) && alias ls=eza
 (( $+commands[gh] )) && alias ghas="gh auth switch"
 if (( $+commands[git] )); then
@@ -42,9 +49,12 @@ if (( $+commands[tmux] )); then
 fi
 (( $+commands[wget] )) && alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 
-(( $+commands[ng] )) && source <(ng completion script)
+if (( $+commands[ng] )); then
+  source <(ng completion script)
+  alias ngr="ng serve"
+  alias ngf="ng lint --fix"
+fi
 
-(( $+commands[mise] )) && eval "$(mise activate zsh)"
 (( $+commands[zoxide] )) && eval "$(zoxide init zsh)"
 
 alias l="ls -l --git"
