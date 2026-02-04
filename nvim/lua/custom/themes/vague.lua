@@ -9,6 +9,11 @@ return {
             keyword_return = 'bold',
             keywords_exception = 'bold',
         },
+        plugins = {
+            lsp = {
+                diagnostic_info = 'none',
+            },
+        },
     },
     config = function(_, opts)
         require('vague').setup(opts)
