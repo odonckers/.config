@@ -1,4 +1,5 @@
 tap "alajmo/mani"
+tap "anomalyco/tap"
 tap "hashicorp/tap"
 tap "jstkdng/programs"
 tap "nikitabobko/tap"
@@ -42,12 +43,10 @@ brew "mani"
 brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
-# AI coding agent, built for the terminal
-brew "opencode"
 # General-purpose scripting language
 brew "php"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Experimental Rust compiler front-end for IDEs
 brew "rust-analyzer"
 # Opinionated Lua code formatter
@@ -78,6 +77,8 @@ brew "xdg-ninja"
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode"
 # Vault
 brew "hashicorp/tap/vault"
 # Drop in replacement for ueberzug written in C++
@@ -124,6 +125,8 @@ cask "utm"
 cask "visual-studio-code"
 # Open-source code editor
 cask "visual-studio-code@insiders"
+# Web browser
+cask "waterfox"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Multiplayer code editor
