@@ -12,6 +12,8 @@ vim.lsp.enable({
     'eslint',
 })
 
+vim.lsp.inlay_hint.enable(true)
+
 vim.diagnostic.config({
     float = {
         border = 'rounded',
