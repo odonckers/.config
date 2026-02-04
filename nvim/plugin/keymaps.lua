@@ -10,6 +10,9 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Half page up (centered)' })
 -- Better J behavior
 vim.keymap.set('n', 'J', 'mzJ`z', { desc = 'Join lines and keep cursor position', noremap = true })
 
+-- Bordered hover
+vim.keymap.set('n', 'K', function() vim.lsp.buf.hover({ border = 'rounded' }) end, { desc = 'Hover' })
+
 -- Better indenting
 vim.keymap.set('v', '>', '>gv', { desc = 'Indent right', noremap = true })
 vim.keymap.set('v', '<', '<gv', { desc = 'Indent left', noremap = true })
