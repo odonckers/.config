@@ -1,5 +1,5 @@
 -- Custom settings
-vim.g.relativenumber = false
+vim.g.relativenumber = true
 
 -- Basic settings
 vim.opt.number = true -- Line numbers

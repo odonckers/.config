@@ -21,7 +21,7 @@ end, {})
 vim.api.nvim_create_user_command('SetNoVirtualLines', function()
     vim.diagnostic.config({
         virtual_lines = false,
-        virtual_text = true,
+        virtual_text = { current_line = true },
     })
     vim.notify('Disabled LSP virtual lines')
 end, {})

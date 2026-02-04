@@ -19,7 +19,7 @@ vim.diagnostic.config({
         border = 'rounded',
         focusable = true,
     },
-    virtual_lines = { current_line = true },
-    virtual_text = false,
+    virtual_lines = false,
+    virtual_text = { current_line = true },
     underline = { severity = vim.diagnostic.severity.WARN },
 })
