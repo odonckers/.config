@@ -36,7 +36,7 @@ return {
         },
         { '<leader>`', '<cmd>FzfLua marks<cr>', desc = 'Search marks', silent = true },
         {
-            '<leader>bs',
+            '<leader>bb',
             -- height = 4 (decorations) + 1 (separator) + 40 (buffers)
             -- width = 4 (decorations) + 100
             '<cmd>FzfLua buffers winopts={height=45,width=104,preview={hidden=true}}<cr>',

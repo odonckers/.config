@@ -5,7 +5,6 @@ return {
         preset = 'helix',
         icons = { mappings = false },
         spec = {
-            { '<leader>a', group = 'AI', mode = { 'n', 't', 'i', 'x' } },
             {
                 '<leader>b',
                 group = 'Buffers',
@@ -14,8 +13,10 @@ return {
             { '<leader>c', group = 'Quickfix list' },
             { '<leader>d', group = 'Diagnostics' },
             { '<leader>g', group = 'Git' },
-            { '<leader>n', group = 'Notes' },
+            { '<leader>gt', group = 'Toggle' },
+            { '<leader>o', group = 'Obsidian' },
             { '<leader>t', group = 'Test' },
+            { '<leader>tr', group = 'Run' },
             { '<leader>w', proxy = '<C-w>', group = 'Windows' },
         },
     },

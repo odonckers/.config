@@ -15,25 +15,29 @@ return {
                 path = '~/Documents/OwenOS',
             },
         },
+        daily_notes = {
+            folder = 'Daily Notes',
+            template = 'Templates/Daily Note.md',
+        },
     },
     cmd = 'Obsidian',
     keys = {
         -- Top level commands
-        { '<leader>n<leader>', '<cmd>Obsidian quick_switch<cr>', desc = 'Quick switch', silent = true },
-        { '<leader>nn', '<cmd>Obsidian new<cr>', desc = 'New note', silent = true },
-        { '<leader>ns', '<cmd>Obsidian search<cr>', desc = 'Search notes', silent = true },
-        { '<leader>nw', '<cmd>Obsidian workspace<cr>', desc = 'Switch workspaces', silent = true },
+        { '<leader>oo', '<cmd>Obsidian quick_switch<cr>', desc = 'Quick switch', silent = true },
+        { '<leader>on', '<cmd>Obsidian new<cr>', desc = 'New note', silent = true },
+        { '<leader>os', '<cmd>Obsidian search<cr>', desc = 'Search notes', silent = true },
+        { '<leader>ow', '<cmd>Obsidian workspace<cr>', desc = 'Switch workspaces', silent = true },
 
         -- Note commands
-        { '<leader>nb', '<cmd>Obsidian backlinks<cr>', desc = 'Goto backlinks', silent = true },
-        { '<leader>nc', '<cmd>Obsidian toc<cr>', desc = 'Search table of contents for note', silent = true },
-        { '<leader>nd', '<cmd>Obsidian dailies<cr>', desc = 'Search daily notes', silent = true },
-        { '<leader>nI', '<cmd>Obsidian paste_img<cr>', desc = 'Paste image at cursor', silent = true },
-        { '<leader>nl', '<cmd>Obsidian links<cr>', mode = 'n', desc = 'Links in note', silent = true },
-        { '<leader>no', '<cmd>Obsidian follow_link<cr>', desc = 'Open/follow link under cursor', silent = true },
-        { '<leader>nr', '<cmd>Obsidian rename<cr>', desc = 'Rename note or link under cursor', silent = true },
-        { '<leader>nt', '<cmd>Obsidian today<cr>', desc = 'Open todays note', silent = true },
-        { '<leader>ny', '<cmd>Obsidian yesterday<cr>', desc = 'Open yesterdays note', silent = true },
+        { '<leader>ob', '<cmd>Obsidian backlinks<cr>', desc = 'Goto backlinks', silent = true },
+        { '<leader>oc', '<cmd>Obsidian toc<cr>', desc = 'Search table of contents for note', silent = true },
+        { '<leader>od', '<cmd>Obsidian dailies<cr>', desc = 'Search daily notes', silent = true },
+        { '<leader>of', '<cmd>Obsidian follow_link<cr>', desc = 'Follow link under cursor', silent = true },
+        { '<leader>oI', '<cmd>Obsidian paste_img<cr>', desc = 'Paste image at cursor', silent = true },
+        { '<leader>ol', '<cmd>Obsidian links<cr>', mode = 'n', desc = 'Links in note', silent = true },
+        { '<leader>or', '<cmd>Obsidian rename<cr>', desc = 'Rename note or link under cursor', silent = true },
+        { '<leader>ot', '<cmd>Obsidian today<cr>', desc = 'Open todays note', silent = true },
+        { '<leader>oy', '<cmd>Obsidian yesterday<cr>', desc = 'Open yesterdays note', silent = true },
 
         -- Visual mode commands
         {
