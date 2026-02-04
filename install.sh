@@ -9,6 +9,7 @@ XDG_CONFIG_HOME="$HOME/.config"
 . $XDG_CONFIG_HOME/installers/rustup.sh
 . $XDG_CONFIG_HOME/installers/go.sh
 . $XDG_CONFIG_HOME/installers/dotnet.sh
+. $XDG_CONFIG_HOME/installers/aspire.sh
 . $XDG_CONFIG_HOME/installers/aws-cli.sh
 . $XDG_CONFIG_HOME/installers/netcoredbg.sh
 . $XDG_CONFIG_HOME/installers/oh-my-zsh.sh
