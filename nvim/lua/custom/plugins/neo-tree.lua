@@ -82,6 +82,6 @@ return {
         },
     },
     keys = {
-        { '<leader>e', '<cmd>Neotree<cr>', desc = 'File explorer' },
+        { '<leader>E', '<cmd>Neotree<cr>', desc = 'File explorer' },
     },
 }

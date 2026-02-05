@@ -27,7 +27,7 @@ return {
         { '<leader><leader>', '<cmd>FzfLua files<cr>', desc = 'Search files names', silent = true },
         { '<leader>/', '<cmd>FzfLua live_grep<cr>', desc = 'Search file contents', silent = true },
         { '<leader>`', '<cmd>FzfLua marks<cr>', desc = 'Search marks', silent = true },
-        { '<leader>E', '<cmd>FzfLua oldfiles<cr>', desc = 'Search old files', silent = true },
+        { '<leader>e', '<cmd>FzfLua oldfiles<cr>', desc = 'Search old files', silent = true },
         { '<leader>r', '<cmd>FzfLua resume<cr>', desc = 'Resume last open FZF', silent = true },
         { '<leader>bb', '<cmd>FzfLua buffers<cr>', desc = 'Search open buffers', silent = true },
     },
