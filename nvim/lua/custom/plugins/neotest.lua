@@ -1,3 +1,5 @@
+---@module "lazy"
+---@type LazySpec
 return {
     'nvim-neotest/neotest',
     dependencies = {
@@ -30,12 +32,11 @@ return {
         -- Run
         { '<leader>trr', function() require('neotest').run.run() end, desc = 'Run the nearest test' },
         { '<leader>trf', function() require('neotest').run.run(vim.fn.expand('%')) end, desc = 'Run the current file' },
-        -- TODO: Requires nvim-dap
-        -- {
-        --     '<leader>trd',
-        --     function() require('neotest').run.run({ strategy = 'dap' }) end,
-        --     desc = 'Debug the nearest test',
-        -- },
+        {
+            '<leader>trd',
+            function() require('neotest').run.run({ strategy = 'dap' }) end,
+            desc = 'Debug the nearest test',
+        },
         { '<leader>trs', function() require('neotest').run.stop() end, desc = 'Stop the nearest test' },
         { '<leader>tra', function() require('neotest').run.attach() end, desc = 'Attach to the nearest test' },
 

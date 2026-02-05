@@ -1,9 +1,9 @@
+---@module "lazy"
+---@type LazySpec
 return {
     {
         'nvim-treesitter/nvim-treesitter',
-        dependencies = { 'windwp/nvim-ts-autotag' },
         build = ':TSUpdate',
-        main = 'nvim-treesitter.configs',
         opts = {
             ensure_installed = {
                 'angular',

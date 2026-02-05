@@ -1,11 +1,15 @@
+---@module "lazy"
+---@type LazySpec
 return {
     'ibhagwan/fzf-lua',
-    lazy = false,
+    dependencies = { 'nvim-mini/mini.icons' },
+    ---@module "fzf-lua"
+    ---@type fzf-lua.Config
     opts = {
         winopts = {
-            preview = {
-                flip_columns = 168, -- 4 (decorations) + 164
-            },
+            height = 0.85, -- default window height
+            width = 0.40, -- half default window width
+            preview = { layout = 'vertical' },
         },
         previewers = {
             builtin = {
@@ -18,32 +22,13 @@ return {
             glob_flag = '--iglob', -- case insensitive globs
             glob_separator = '%s%-%-', -- query separator pattern (lua): ' --'
         },
-        keymap = {
-            fzf = {
-                true,
-                ['ctrl-q'] = 'select-all+accept',
-            },
-        },
     },
     keys = {
         { '<leader><leader>', '<cmd>FzfLua files<cr>', desc = 'Search files names', silent = true },
         { '<leader>/', '<cmd>FzfLua live_grep<cr>', desc = 'Search file contents', silent = true },
-        {
-            '<leader>?',
-            '<cmd>FzfLua grep_cword<cr>',
-            desc = 'Search file contents for word under cursor',
-            silent = true,
-        },
         { '<leader>`', '<cmd>FzfLua marks<cr>', desc = 'Search marks', silent = true },
-        {
-            '<leader>bb',
-            -- height = 4 (decorations) + 1 (separator) + 40 (buffers)
-            -- width = 4 (decorations) + 100
-            '<cmd>FzfLua buffers winopts={height=45,width=104,preview={hidden=true}}<cr>',
-            desc = 'Search open buffers',
-            silent = true,
-        },
-        { '<leader>e', '<cmd>FzfLua oldfiles<cr>', desc = 'Search old files', silent = true },
+        { '<leader>E', '<cmd>FzfLua oldfiles<cr>', desc = 'Search old files', silent = true },
         { '<leader>r', '<cmd>FzfLua resume<cr>', desc = 'Resume last open FZF', silent = true },
+        { '<leader>bb', '<cmd>FzfLua buffers<cr>', desc = 'Search open buffers', silent = true },
     },
 }

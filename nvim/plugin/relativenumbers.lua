@@ -7,7 +7,21 @@ vim.api.nvim_create_autocmd('InsertEnter', {
         vim.opt.relativenumber = false
     end,
 })
+
 vim.api.nvim_create_autocmd('InsertLeave', {
     group = rlngroup,
     callback = function() vim.opt.relativenumber = vim.g.relativenumber end,
 })
+
+-- Set relative number manually
+vim.api.nvim_create_user_command('SetRelativeNumber', function()
+    vim.g.relativenumber = true
+    vim.opt.relativenumber = vim.g.relativenumber
+    vim.notify('Enabled relative line numbers')
+end, {})
+
+vim.api.nvim_create_user_command('SetNoRelativeNumber', function()
+    vim.g.relativenumber = false
+    vim.opt.relativenumber = vim.g.relativenumber
+    vim.notify('Disabled relative line numbers')
+end, {})

@@ -1,6 +1,11 @@
+---@module "lazy"
+---@type LazySpec
 return {
     'stevearc/oil.nvim',
-    lazy = false,
+    dependencies = { 'nvim-mini/mini.icons' },
+    lazy = false, -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+    ---@module 'oil'
+    ---@type oil.SetupOpts
     opts = {
         view_options = { show_hidden = true },
         keymaps = {

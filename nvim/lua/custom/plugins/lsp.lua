@@ -1,3 +1,5 @@
+---@module "lazy"
+---@type LazySpec
 return {
     'neovim/nvim-lspconfig',
     event = { 'BufReadPre', 'BufNewFile' },
@@ -17,7 +19,10 @@ return {
         { 'folke/lazydev.nvim', ft = 'lua', config = true },
         { 'mrcjkb/rustaceanvim', version = '^7', lazy = false },
         { 'GustavEikaas/easy-dotnet.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
-        { 'antosha417/nvim-lsp-file-operations', dependencies = { 'nvim-lua/plenary.nvim' } },
+        {
+            'antosha417/nvim-lsp-file-operations',
+            dependencies = { 'nvim-lua/plenary.nvim', 'nvim-neo-tree/neo-tree.nvim' },
+        },
 
         -- Formatting
         'stevearc/conform.nvim',
@@ -33,10 +38,10 @@ return {
             snippet = {
                 expand = function(args) vim.snippet.expand(args.body) end,
             },
-            -- window = {
-            --     completion = cmp.config.window.bordered(),
-            --     documentation = cmp.config.window.bordered(),
-            -- },
+            window = {
+                completion = cmp.config.window.bordered(),
+                documentation = cmp.config.window.bordered(),
+            },
             mapping = cmp.mapping.preset.insert({
                 ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -165,6 +170,16 @@ return {
                 return { timeout_ms = 1000, lsp_format = 'never' }
             end,
         })
+
+        -- Auto format commands
+        vim.api.nvim_create_user_command('SetAutoFormat', function()
+            vim.b.autofmt = true
+            vim.notify('Enabled auto format for this buffer')
+        end, {})
+        vim.api.nvim_create_user_command('SetNoAutoFormat', function()
+            vim.b.autofmt = false
+            vim.notify('Disabled auto format for this buffer')
+        end, {})
     end,
     keys = {
         { '<leader>f', function() require('conform').format() end, desc = 'Format' },

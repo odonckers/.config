@@ -1,6 +1,8 @@
+---@module "lazy"
+---@type LazySpec
 return {
     'folke/which-key.nvim',
-    lazy = false,
+    event = 'VeryLazy',
     opts = {
         preset = 'helix',
         icons = { mappings = false },
@@ -21,5 +23,4 @@ return {
             { '<leader>w', proxy = '<C-w>', group = 'Windows' },
         },
     },
-    config = function(_, opts) require('which-key').setup(opts) end,
 }

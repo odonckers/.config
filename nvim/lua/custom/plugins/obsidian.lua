@@ -1,12 +1,13 @@
+---@module "lazy"
+---@type LazySpec
 return {
     'obsidian-nvim/obsidian.nvim',
-    version = '*',
-    dependencies = {
-        'nvim-lua/plenary.nvim',
-        'ibhagwan/fzf-lua',
-    },
-    lazy = true,
+    version = '*', -- use latest release, remove to use latest commit
+    dependencies = { 'ibhagwan/fzf-lua' },
     ft = 'markdown',
+    cmd = 'Obsidian',
+    ---@module 'obsidian'
+    ---@type obsidian.config
     opts = {
         legacy_commands = false, -- this will be removed in the next major release
         workspaces = {
@@ -20,7 +21,6 @@ return {
             template = 'Templates/Daily Note.md',
         },
     },
-    cmd = 'Obsidian',
     keys = {
         -- Top level commands
         { '<leader>oo', '<cmd>Obsidian quick_switch<cr>', desc = 'Quick switch', silent = true },
