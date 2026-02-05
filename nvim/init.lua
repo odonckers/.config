@@ -28,6 +28,7 @@ vim.opt.ignorecase = true -- Case insensitive search
 vim.opt.smartcase = true -- Case sensitive if uppercase in search
 
 -- Visual settings
+vim.opt.showmode = false -- Hide the -- MODE -- text
 vim.opt.signcolumn = 'yes' -- Always show sign column
 vim.opt.colorcolumn = '140' -- Show column in text
 vim.opt.showmatch = true -- Highlight matching brackets
