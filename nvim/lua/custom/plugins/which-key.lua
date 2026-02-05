@@ -16,6 +16,7 @@ return {
             { '<leader>d', group = 'Diagnostics' },
             { '<leader>g', group = 'Git' },
             { '<leader>gt', group = 'Toggle' },
+            { '<leader>h', group = 'Harpoon' },
             { '<leader>n', group = 'No Neck Pain' },
             { '<leader>o', group = 'Obsidian' },
             { '<leader>t', group = 'Test' },

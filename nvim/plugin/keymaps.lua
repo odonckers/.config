@@ -50,12 +50,11 @@ vim.keymap.set('n', '<leader>bd', '<cmd>bdelete<cr>', { desc = 'Close buffer', s
 vim.keymap.set('n', '<leader>co', '<cmd>copen<cr>', { desc = 'Open', silent = true })
 vim.keymap.set('n', '<leader>cc', '<cmd>cclose<cr>', { desc = 'Close', silent = true })
 vim.keymap.set('n', '<leader>cr', '<cmd>cexpr []<bar>cclose<cr>', { desc = 'Reset', silent = true })
+
+-- Diagnostics
 vim.keymap.set(
     'n',
-    '<leader>cd',
+    '<leader>dq',
     function() vim.diagnostic.setqflist() end,
     { desc = 'Set to diagnostics in buffer', silent = true }
 )
-
--- Git
-vim.keymap.set('n', '<leader>gl', '<cmd>LazyGit<cr>', { desc = 'Open LazyGit', silent = true })

@@ -91,5 +91,4 @@ return {
             vim.keymap.set({ 'o', 'x' }, 'ih', gitsigns.select_hunk, { desc = 'Select hunk', buffer = bufnr })
         end,
     },
-    config = function(_, opts) require('gitsigns').setup(opts) end,
 }
