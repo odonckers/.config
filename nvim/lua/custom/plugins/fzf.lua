@@ -12,7 +12,7 @@ return {
         'max-perf',
         winopts = {
             height = 0.85, -- default window height
-            width = 0.40, -- half default window width
+            width = 0.45, -- half default window width
             preview = { layout = 'vertical' },
         },
         previewers = {
