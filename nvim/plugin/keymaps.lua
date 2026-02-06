@@ -58,3 +58,7 @@ vim.keymap.set(
     function() vim.diagnostic.setqflist() end,
     { desc = 'Set to diagnostics in buffer', silent = true }
 )
+
+-- Sessions
+vim.keymap.set('n', '<leader>sm', '<cmd>mksession!<cr>', { desc = 'Make session' })
+vim.keymap.set('n', '<leader>ss', '<cmd>source Session.vim<cr>', { desc = 'Source session in cwd' })
