@@ -7,6 +7,9 @@ return {
     ---@module "fzf-lua"
     ---@type fzf-lua.Config
     opts = {
+        -- utilizes fzf's native previewing ability in the terminal where possible
+        -- using bat for previews and disables icons globally for max performance
+        'max-perf',
         winopts = {
             height = 0.85, -- default window height
             width = 0.40, -- half default window width
