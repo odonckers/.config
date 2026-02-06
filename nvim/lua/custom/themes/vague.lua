@@ -23,7 +23,7 @@ return {
 
             -- keywords
             keywords = 'none',
-            keyword_return = 'bold',
+            keyword_return = 'italic',
             keywords_loop = 'none',
             keywords_label = 'none',
             keywords_exception = 'bold',
