@@ -52,12 +52,7 @@ vim.keymap.set('n', '<leader>cc', '<cmd>cclose<cr>', { desc = 'Close', silent = 
 vim.keymap.set('n', '<leader>cr', '<cmd>cexpr []<bar>cclose<cr>', { desc = 'Reset', silent = true })
 
 -- Diagnostics
-vim.keymap.set(
-    'n',
-    '<leader>dq',
-    function() vim.diagnostic.setqflist() end,
-    { desc = 'Set to diagnostics in buffer', silent = true }
-)
+vim.keymap.set('n', '<leader>dq', function() vim.diagnostic.setqflist() end, { desc = 'Set quickfix list' })
 
 -- Sessions
 vim.keymap.set('n', '<leader>sm', '<cmd>mksession!<cr>', { desc = 'Make session' })
