@@ -20,6 +20,7 @@
 !/homebrew
 !/ideavim
 !/installers
+!/karabiner
 !/kitty
 !/lazygit
 !/mise
@@ -30,6 +31,7 @@
 
 # But ignore these files without the allowed path
 /git/config
+/karabiner/automatic_backups
 /nvim/lazy-lock.json
 /tmux/plugins
 
