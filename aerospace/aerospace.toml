@@ -74,14 +74,8 @@ on-mode-changed = []
 # Workspace arrangement
 
 [[on-window-detected]]
-if.app-id = 'net.waterfox.waterfox'
-if.window-title-regex-substring = 'Personal$'
+if.app-id = 'org.mozilla.librewolf'
 run = ['move-node-to-workspace 1']
-
-[[on-window-detected]]
-if.app-id = 'net.waterfox.waterfox'
-if.window-title-regex-substring = 'Work$'
-run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
@@ -109,7 +103,7 @@ run = 'move-node-to-workspace 9'
 
 # Picture-in-Picture
 [[on-window-detected]]
-if.app-id = 'net.waterfox.waterfox'
+if.app-id = 'org.mozilla.librewolf'
 if.window-title-regex-substring = 'Picture-in-Picture'
 run = 'layout floating'
 
