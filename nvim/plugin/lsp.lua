@@ -1,4 +1,5 @@
 vim.lsp.enable({
+    'clangd', -- brew:llvm
     'lua_ls', -- LuaLS/lua-language-server
     'vtsls', -- npm:@vtsls/language-server
     'angularls', -- npm:@angular/language-server

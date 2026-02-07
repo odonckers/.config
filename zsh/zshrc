@@ -13,6 +13,12 @@ else
   compinit -d "$ZSH_COMPDUMP"
 fi
 
+# zsh sources .zshenv → .zprofile → .zshrc → .zlogin → .zlogout
+# .zprofile runs path_helper which appends the system bins to the front of PATH
+# Export homebrew paths here to take precedent in interactive shell
+export PATH="$HOMEBREW_PREFIX/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/llvm/bin:$PATH"
+
 (( $+commands[mise] )) && eval "$(mise activate zsh)"
 
 (( $+commands[assume] )) && alias assume=". assume"
@@ -21,6 +27,7 @@ if (( $+commands[dotnet] )); then
   alias dr="dotnet run"
   alias df="dotnet format"
 fi
+(( $+commands[ctags] )) && alias tag="ctags -R ."
 (( $+commands[eza] )) && alias ls=eza
 (( $+commands[gh] )) && alias ghas="gh auth switch"
 if (( $+commands[git] )); then
