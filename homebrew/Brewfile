@@ -109,6 +109,8 @@ cask "google-chrome"
 cask "karabiner-elements"
 # GPU-based terminal emulator
 cask "kitty"
+# Web browser
+cask "librewolf"
 # Mouse utility to add gesture functions and smooth scrolling to 3rd party mice
 cask "mac-mouse-fix"
 # Provides updates to various Microsoft products
@@ -129,8 +131,6 @@ cask "utm"
 cask "visual-studio-code"
 # Open-source code editor
 cask "visual-studio-code@insiders"
-# Web browser
-cask "waterfox"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Multiplayer code editor
