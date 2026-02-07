@@ -49,8 +49,6 @@ brew "neovim"
 brew "php"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Experimental Rust compiler front-end for IDEs
-brew "rust-analyzer"
 # Opinionated Lua code formatter
 brew "stylua"
 # Open source continuous file synchronization application
