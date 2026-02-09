@@ -48,13 +48,13 @@ persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 [workspace-to-monitor-force-assignment]
     1 = ['built-in', 'main']  # personal browser
     2 = 'main'                # work browser
-    3 = 'main'                # terminal / work
-    4 = 'main'                # tests / work overflow
-    5 = 'main'                # study
-    6 = 'main'                # windows rdp
-    7 = 'main'                # vpn
-    8 = 'main'                # teams calls
-    9 = ['secondary', 'main'] # teams
+    3 = 'main'                # teams
+    4 = 'main'
+    5 = 'main'                # windows rdp
+    6 = 'main'
+    7 = ['secondary', 'main'] # study
+    8 = ['secondary', 'main'] # tests / work overflow
+    9 = ['secondary', 'main'] # terminal / work
 
 # Not working smh
 # exec-on-workspace-change = ['/bin/bash', '-c', '''
@@ -78,27 +78,23 @@ if.app-id = 'org.mozilla.librewolf'
 run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
+if.app-id = 'com.microsoft.teams2'
 run = 'move-node-to-workspace 3'
-
-[[on-window-detected]]
-if.app-id = 'com.electron.cypress'
-run = 'move-node-to-workspace 4'
-
-[[on-window-detected]]
-if.app-id = 'org.jw.jwlibrary'
-run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.rdc.macos'
 run = 'move-node-to-workspace 6'
 
 [[on-window-detected]]
-if.app-id = 'net.pulsesecure.Pulse-Secure'
+if.app-id = 'org.jw.jwlibrary'
 run = 'move-node-to-workspace 7'
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.teams2'
+if.app-id = 'com.electron.cypress'
+run = 'move-node-to-workspace 8'
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace 9'
 
 # Picture-in-Picture
