@@ -47,6 +47,8 @@ brew "mise"
 brew "neovim"
 # General-purpose scripting language
 brew "php"
+# Simple and easy-to-use library to learn videogames programming
+brew "raylib"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Opinionated Lua code formatter
