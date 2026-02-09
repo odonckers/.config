@@ -48,13 +48,13 @@ persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 [workspace-to-monitor-force-assignment]
     1 = ['built-in', 'main']  # personal browser
     2 = 'main'                # work browser
-    3 = 'main'                # teams
-    4 = 'main'                # spotify
+    3 = 'main'                # terminal / work
+    4 = 'main'                # tests / work overflow
     5 = 'main'
     6 = 'main'                # windows rdp
-    7 = ['secondary', 'main'] # study
-    8 = ['secondary', 'main'] # tests / work overflow
-    9 = ['secondary', 'main'] # terminal / work
+    7 = 'main'                # study
+    8 = ['secondary', 'main'] # teams
+    9 = ['secondary', 'main'] # spotify
 
 # Not working smh
 # exec-on-workspace-change = ['/bin/bash', '-c', '''
@@ -78,11 +78,11 @@ if.app-id = 'org.mozilla.librewolf'
 run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.teams2'
+if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
-if.app-id = 'com.spotify.client'
+if.app-id = 'com.electron.cypress'
 run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
@@ -94,11 +94,11 @@ if.app-id = 'org.jw.jwlibrary'
 run = 'move-node-to-workspace 7'
 
 [[on-window-detected]]
-if.app-id = 'com.electron.cypress'
+if.app-id = 'com.spotify.client'
 run = 'move-node-to-workspace 8'
 
 [[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
+if.app-id = 'com.microsoft.teams2'
 run = 'move-node-to-workspace 9'
 
 # Picture-in-Picture
