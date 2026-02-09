@@ -7,13 +7,21 @@ return {
     ---@module "fzf-lua"
     ---@type fzf-lua.Config
     opts = {
-        -- utilizes fzf's native previewing ability in the terminal where possible
-        -- using bat for previews and disables icons globally for max performance
-        'max-perf',
+        'fzf-tmux',
+        fzf_colors = false,
+        fzf_opts = {
+            ['--ansi'] = true,
+            ['--info'] = 'default', -- fzf < v0.42 = "inline"
+            ['--height'] = false,
+            ['--no-height'] = true,
+            ['--layout'] = 'default',
+            ['--border'] = 'rounded',
+            ['--highlight-line'] = false, -- fzf >= v0.53
+            ['--tmux'] = 'center,80%,60%',
+        },
+        fzf_tmux_opts = { ['-p'] = '80%,80%', ['--margin'] = '0,0' },
         winopts = {
-            height = 0.85, -- default window height
-            width = 0.45, -- half default window width
-            preview = { layout = 'vertical' },
+            backdrop = 100,
         },
         previewers = {
             builtin = {

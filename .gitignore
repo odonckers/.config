@@ -15,6 +15,7 @@
 
 # And these directories
 !/aerospace
+!/bat
 !/ghostty
 !/git
 !/homebrew
