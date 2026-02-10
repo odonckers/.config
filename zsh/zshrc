@@ -75,6 +75,7 @@ if (( $+commands[tmux] )); then
   alias tks="tmux kill-server"
 fi
 (( $+commands[wget] )) && alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+(( $+commands[yazi] )) && alias y=yazi
 
 if (( $+commands[ng] )); then
   source <(ng completion script)
