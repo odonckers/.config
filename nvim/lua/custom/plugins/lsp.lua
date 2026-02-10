@@ -21,7 +21,7 @@ return {
         { 'GustavEikaas/easy-dotnet.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
         {
             'antosha417/nvim-lsp-file-operations',
-            dependencies = { 'nvim-lua/plenary.nvim', 'nvim-neo-tree/neo-tree.nvim' },
+            dependencies = { 'nvim-lua/plenary.nvim' },
         },
 
         -- Formatting
