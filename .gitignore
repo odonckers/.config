@@ -36,6 +36,7 @@
 /karabiner/automatic_backups
 /nvim/lazy-lock.json
 /tmux/plugins
+/yazi/plugins
 
 # And always ignore .local files
 *.local
