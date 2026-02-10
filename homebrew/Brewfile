@@ -13,6 +13,8 @@ brew "chafa"
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -25,6 +27,10 @@ brew "git-lfs"
 brew "gitleaks"
 # Easiest way to access your cloud
 brew "granted"
+# Configurable static site generator
+brew "hugo"
+# Tools and libraries to manipulate images in select formats
+brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Modern load testing tool, using Go and JavaScript
@@ -47,10 +53,16 @@ brew "mise"
 brew "neovim"
 # General-purpose scripting language
 brew "php"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
 # Simple and easy-to-use library to learn videogames programming
 brew "raylib"
+# SVG rendering tool and library
+brew "resvg"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# 7-Zip is a file archiver with a high compression ratio
+brew "sevenzip"
 # Opinionated Lua code formatter
 brew "stylua"
 # Open source continuous file synchronization application
@@ -75,6 +87,8 @@ brew "wget"
 brew "xcodegen"
 # Check your $HOME for unwanted files and directories
 brew "xdg-ninja"
+# Blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # UNIX shell (command interpreter)
