@@ -30,6 +30,7 @@ fi
 (( $+commands[ctags] )) && alias tag="ctags -R ."
 (( $+commands[eza] )) && alias ls=eza
 if (( $+commands[fzf] )); then
+  source <(fzf --zsh)
   # upstream: https://github.com/vague-theme/vague-fzf/blob/main/vague
   export FZF_DEFAULT_OPTS="""
   --color=fg:#cdcdcd
