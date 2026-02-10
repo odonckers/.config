@@ -124,9 +124,9 @@ run = 'layout floating'
     inner.horizontal = 0
     inner.vertical =   0
     outer.left =       0
-    outer.bottom =     0
-    outer.top =        0
     outer.right =      0
+    outer.top =        [{ monitor.main = 0 }, { monitor."LG Ultra HD" = 300 }, 0] # vertical secondary monitor
+    outer.bottom =     [{ monitor.main = 0 }, { monitor."LG Ultra HD" = 200 }, 0]
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
