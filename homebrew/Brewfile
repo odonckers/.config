@@ -3,18 +3,30 @@ tap "anomalyco/tap"
 tap "hashicorp/tap"
 tap "jstkdng/programs"
 tap "nikitabobko/tap"
+# Automatic configure script builder
+brew "autoconf"
+# Collection of over 500 reusable autoconf macros
+brew "autoconf-archive"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
 # Use AWS IAM credentials to authenticate to Kubernetes
 brew "aws-iam-authenticator"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Object-file caching compiler wrapper
+brew "ccache"
 # Versatile and fast Unicode/ASCII/ANSI graphics renderer
 brew "chafa"
+# Cross-platform make
+brew "cmake"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
+# Generic library support script
+brew "libtool"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -27,6 +39,8 @@ brew "git-lfs"
 brew "gitleaks"
 # Easiest way to access your cloud
 brew "granted"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 # Configurable static site generator
 brew "hugo"
 # Tools and libraries to manipulate images in select formats
@@ -49,12 +63,18 @@ brew "luarocks"
 brew "mani"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Netwide Assembler (NASM) is an 80x86 assembler
+brew "nasm"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Small build system for use with gyp or CMake
+brew "ninja"
 # General-purpose scripting language
 brew "php"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# Cross-platform application and UI framework
+brew "qt"
 # Simple and easy-to-use library to learn videogames programming
 brew "raylib"
 # SVG rendering tool and library
