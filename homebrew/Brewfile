@@ -2,6 +2,7 @@ tap "alajmo/mani"
 tap "anomalyco/tap"
 tap "hashicorp/tap"
 tap "jstkdng/programs"
+tap "mediosz/tap"
 tap "nikitabobko/tap"
 # Automatic configure script builder
 brew "autoconf"
@@ -135,6 +136,8 @@ cask "docker-desktop"
 cask "figma"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Free and open-source image editor
+cask "gimp"
 # Xcode extension for GitHub Copilot
 cask "github-copilot-for-xcode"
 # Web browser
@@ -159,6 +162,8 @@ cask "obsidian"
 cask "spotify"
 # Video game digital distribution service
 cask "steam"
+# SwipeAeroSpace is a tool to switch AeroSpace worksapces by swiping.
+cask "mediosz/tap/swipeaerospace"
 # Virtual machines UI using QEMU
 cask "utm"
 # Open-source code editor
