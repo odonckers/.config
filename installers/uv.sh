@@ -1,4 +1,4 @@
-#/usr/bin/env zsh
+#!/usr/bin/env bash
 
 if command -v uv &>/dev/null; then
   echo "🐍 UV is already installed"

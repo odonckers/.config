@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 # Reset directory to origin or clone
 NETCOREDBG_DIR=$XDG_DATA_HOME/netcoredbg

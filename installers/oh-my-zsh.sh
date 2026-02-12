@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 if command -v omz &>/dev/null; then
   echo "✨ Oh-My-ZSH is already installed"

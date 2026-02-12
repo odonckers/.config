@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 if command -v go &>/dev/null; then
   echo "🐿️ Go is already installed"

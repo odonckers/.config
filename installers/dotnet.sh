@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 if command -v dotnet &>/dev/null; then
   echo "🔵 .NET is already installed"

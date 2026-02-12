@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 if command -v brew &>/dev/null; then
   echo "🍺 Homebrew is already installed"

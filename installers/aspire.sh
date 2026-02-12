@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 if command -v aspire &>/dev/null; then
   echo "🟪 Aspire is already installed"

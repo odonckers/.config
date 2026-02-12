@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 echo "💻 Configuring macOS..."
 echo "⚠️ This will require a reboot after completion."

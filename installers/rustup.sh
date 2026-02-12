@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 if command -v rustc &>/dev/null; then
   echo "🦀 Rust is already installed"
