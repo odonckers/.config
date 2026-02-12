@@ -14,13 +14,13 @@
 !install.sh
 
 # And these directories
+!/.installers
 !/aerospace
 !/bat
 !/ghostty
 !/git
 !/homebrew
 !/ideavim
-!/installers
 !/karabiner
 !/kitty
 !/lazygit
