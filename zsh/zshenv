@@ -28,7 +28,7 @@ source "$XDG_DATA_HOME/cargo/env"
 export GOPATH="$XDG_DATA_HOME/go"
 
 # dotnet
-export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
+export DOTNET_CLI_HOME="$XDG_DATA_HOME"
 export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
 
 # android / gradle
@@ -43,7 +43,7 @@ export PATH="$PATH:$HOMEBREW_PREFIX/opt/llvm/bin"
 export PATH="$PATH:$HOMEBREW_PREFIX/opt/ccache/libexec"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$PATH:$DOTNET_CLI_HOME/tools"
+export PATH="$PATH:$DOTNET_CLI_HOME/.dotnet/tools"
 export PATH="$PATH:$HOME/.aspire/bin"
 export PATH="$PATH:$XDG_DATA_HOME/opencode/bin"
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
