@@ -20,15 +20,14 @@ vim.diagnostic.config({
         border = 'rounded',
         focusable = true,
     },
-    virtual_lines = {
+    virtual_lines = false,
+    virtual_text = {
         current_line = true,
         severity = { min = vim.diagnostic.severity.WARN },
     },
-    virtual_text = {
-        current_line = true,
-        severity = { max = vim.diagnostic.severity.INFO },
+    underline = {
+        severity = { min = vim.diagnostic.severity.WARN },
     },
-    underline = { severity = vim.diagnostic.severity.WARN },
 })
 
 -- Set virtual lines
