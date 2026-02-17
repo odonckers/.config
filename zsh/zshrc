@@ -21,14 +21,18 @@ export PATH="$HOMEBREW_PREFIX/opt/llvm/bin:$PATH"
 
 (( $+commands[mise] )) && eval "$(mise activate zsh)"
 
-(( $+commands[assume] )) && alias assume=". assume"
+(( $+commands[code-insiders] )) && alias codei="codei"
 if (( $+commands[dotnet] )); then
   alias d=dotnet
   alias dr="dotnet run"
   alias df="dotnet format"
 fi
 (( $+commands[ctags] )) && alias tag="ctags -R ."
-(( $+commands[eza] )) && alias ls=eza
+if (( $+commands[eza] )); then
+  alias ls=eza
+  alias l="eza -l --git"
+  alias ll="eza -ahl --git"
+fi
 if (( $+commands[fzf] )); then
   source <(fzf --zsh)
   # upstream: https://github.com/vague-theme/vague-fzf/blob/main/vague
@@ -65,8 +69,9 @@ if (( $+commands[git] )); then
 fi
 (( $+commands[lazygit] )) && alias lg=lazygit
 if (( $+commands[nvim] )); then
-  alias vim=nvim
   export EDITOR="nvim"
+  alias v="nvim"
+  alias vs="nvim -S"
 fi
 (( $+commands[opencode] )) && alias oc=opencode
 if (( $+commands[tmux] )); then
@@ -85,11 +90,7 @@ fi
 
 (( $+commands[zoxide] )) && eval "$(zoxide init zsh)"
 
-alias l="ls -l --git"
-alias ll="l -ah"
-alias v=vim
-alias vs="vim -S"
-
+source $XDG_CONFIG_HOME/zsh/functions/azure-cosmos-emulator.zsh
 source $XDG_CONFIG_HOME/zsh/functions/brew.zsh
 source $XDG_CONFIG_HOME/zsh/functions/ide.zsh
 source $XDG_CONFIG_HOME/zsh/functions/port.zsh
